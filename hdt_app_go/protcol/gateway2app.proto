@@ -1,0 +1,91 @@
+syntax = "proto3";
+package external;
+
+service UserServceRpc {
+	rpc Login(LoginReq) returns (LoginRes) {}
+    rpc Register(RegisterReq) returns (ReturnRes){}
+    rpc ModifyPwdByTel(LoginReq) returns (ReturnRes){}
+    rpc AddQianXunCode(QianxunReq) returns (ReturnRes) {}
+    rpc QianXunSnsVerify(QianxunReq) returns (ReturnRes) {}
+    rpc SetUserToken(TokenReq) returns (ReturnRes) {}
+    rpc GetUserToken(TelReq) returns (TokenRes) {}
+    rpc GetUserRankingInfo(TelReq) returns (RankingInfoRes) {}
+    rpc AppList(IndexReq) returns (AppListRes) {}
+}
+
+message LoginReq {
+    string tel=1;
+    string pwd=2;
+}
+
+message IndexReq {
+    int32 index=1;
+}
+
+message UserInfo{
+   int64 uid          = 1;
+   string nickName    = 2;
+   string avatar      = 3;
+   string sign        = 4;
+   string email       = 5;
+   int64 regTime      = 6;
+   double hdtBalance  = 7;
+   int32 realnameAuth = 8;
+}
+
+message LoginRes{
+   int32 errCode     = 1;
+   UserInfo userInfo = 2;
+}
+
+message RegisterReq{
+    string tel = 1;
+    string pwd = 2;
+    string ip  = 3;
+    int32 RegisterFrom = 4;
+}
+
+message ReturnRes{
+    int32 errCode = 1;
+}
+
+message QianxunReq {
+    string tel  = 1;
+    string code = 2;
+}
+
+message TokenReq {
+    string tel  = 1;
+    string token = 2;
+}
+
+message TelReq {
+    string tel  = 1;
+}
+
+message TokenRes{
+    int32 errCode = 1;
+    string token = 2;
+}
+
+message RankingInfoRes{
+    int32 errCode = 1;
+    message HdtDigInfo{
+        string tel=1;
+        double hdt=2;
+    }
+    repeated HdtDigInfo RankingOfHdtDig = 2; //挖矿排名
+    double DegreeOfDifficulty = 3; //当前难度系数
+    int32 MiningIndex = 4; //上次挖矿排名
+    double HdtMiningLast = 5;
+    double HdtMiningTotal = 6;
+}
+
+message AppListRes{
+    int32 errCode = 1;
+    message AppNameIcon{
+        string AppName=1;
+        string AppIcoPath=2;
+    }
+    repeated AppNameIcon Applist = 2;
+}

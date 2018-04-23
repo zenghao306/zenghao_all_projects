@@ -1,0 +1,2 @@
+现在protocol 只有在只支持linux执行 ， 远程连接ssh， 进入目录/data/src/hdt，
+执行语句protoc -I$GOPATH/src --go_out=plugins=micro:$GOPATH/src  $GOPATH/src/hdt/*.proto

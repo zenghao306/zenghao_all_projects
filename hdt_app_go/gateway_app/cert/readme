@@ -1,0 +1,14 @@
+
+//按照下面步骤执行
+生成key密钥
+openssl genrsa -out ca.key 2048
+生成ca签名crt
+openssl req -new -x509 -sha256 -key ca.key -days 3650 -out ca.crt
+生成server密钥
+openssl genrsa -out server.key 2048
+生成server签名请求csr
+openssl req -new -sha256 -key server.key  -out server.csr
+给server签名
+openssl x509 -req -sha256 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 3650
+查询状态
+openssl x509 -in ./server.crt -noout -text
