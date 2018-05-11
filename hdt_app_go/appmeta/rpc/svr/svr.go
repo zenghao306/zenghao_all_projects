@@ -8,10 +8,10 @@ import (
 	"golang.org/x/net/context"
 	. "hdt_app_go/appmeta/conf"
 	"hdt_app_go/appmeta/db"
+	"hdt_app_go/common"
 	proto "hdt_app_go/protcol"
 	//	. "hdt_app_go/appmeta/log"
 	. "hdt_app_go/appmeta/model"
-	"math"
 	"strconv"
 	"time"
 )
@@ -22,8 +22,6 @@ type UserServceRpc struct {
 	//dao  *xorm.Engine
 	//redis *redis.Client
 }
-
-const Pi = 3.14
 
 func (g *UserServceRpc) LoadConfig() {
 
@@ -100,31 +98,61 @@ func (g *UserServceRpc) GetUserRankingInfo(ctx context.Context, req *proto.TelRe
 			}
 		}
 
-		var r proto.RankingInfoRes_HdtDigInfo
-		r.Tel = k
-		r.Hdt = fValue
-
-		a := &proto.RankingInfoRes_HdtDigInfo{
-			Tel: k,
-			Hdt: fValue,
-		}
-		if i <= 10 { //只统计10个
-			rsp.RankingOfHdtDig = append(rsp.RankingOfHdtDig, a) //挖矿排名，进行记录
-		}
+		//var r proto.RankingInfoRes_HdtDigInfo
+		//r.Tel = k
+		//r.Hdt = fValue
+		//
+		//a := &proto.RankingInfoRes_HdtDigInfo{
+		//	Tel: k,
+		//	Hdt: fValue,
+		//}
+		//if i <= 10 { //只统计10个
+		//	rsp.RankingOfHdtDig = append(rsp.RankingOfHdtDig, a) //挖矿排名，进行记录
+		//}
 	}
 
 	_, rsp.HdtMiningTotal = g.dao.GetUserHdtMiningTotalByTel(req.Tel) //已挖到的总的HDT数量
 
-	p := g.dao.GetHdtPercent()
-	rsp.DegreeOfDifficulty = 1 / math.Pow(1-p, Pi)
+	rsp.DegreeOfDifficulty = g.dao.GetHdtDegreeOfDifficulty()
 
 	rsp.ErrCode = proto.ERR_OK
 	return
 }
 
-//rpc AppList(IndexReq) returns (AppListRes) {}
-func (g *UserServceRpc) AppList(ctx context.Context, req *proto.IndexReq, rsp *proto.AppListRes) (err error) {
-	rsp.ErrCode, rsp.Applist = g.dao.GeAPPIconNameList(req.Index)
+func (g *UserServceRpc) GetUseRankingHdtDig(ctx context.Context, req *proto.TelReq, rsp *proto.RankingInfoRes) (err error) {
+	res := g.dao.GetHourRankingOfHdtDig()
+	i := 0
+	for k, v := range res {
+		i++
+		fValue, _ := strconv.ParseFloat(v, 64)
+
+		f := fmt.Sprintf("%.5f", fValue)
+		fValue2 := common.ParseFloat(f)
+
+		if k == req.Tel {
+			rsp.MiningIndex = int32(i) //记录这家伙的排名
+			rsp.HdtMiningLast = fValue //上次挖矿获取的互动币数量
+			if i > 10 {
+				break
+			}
+		}
+
+		var r proto.RankingInfoRes_HdtDigInfo
+		r.Tel = k
+		r.Hdt = fValue2
+
+		a := &proto.RankingInfoRes_HdtDigInfo{
+			Tel: k,
+			Hdt: fValue2,
+		}
+		if i <= 10 { //只统计10个
+			rsp.RankingOfHdtDig = append(rsp.RankingOfHdtDig, a) //挖矿排名，进行记录
+		}else{
+			break
+		}
+	}
+
+	rsp.ErrCode = proto.ERR_OK
 	return
 }
 

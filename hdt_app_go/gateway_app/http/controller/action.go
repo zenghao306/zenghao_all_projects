@@ -86,9 +86,9 @@ func FindPwdByTel(ctx iris.Context) {
 	}
 
 	//以下这段代码是对传入的参数进行校验
-	//body, _ := ioutil.ReadAll(ctx.Request().Body)
-	//jsonStr, _ := hdtcodec.HdtDecodeV0(string(body))
-	jsonStr, _ := ioutil.ReadAll(ctx.Request().Body)
+	body, _ := ioutil.ReadAll(ctx.Request().Body)
+	jsonStr, _ := hdtcodec.HdtDecodeV0(string(body))
+	//jsonStr, _ := ioutil.ReadAll(ctx.Request().Body)
 	var req FindPwdReq
 	err := json.Unmarshal([]byte(jsonStr), &req)
 	if err != nil {
@@ -153,10 +153,7 @@ func Login(ctx iris.Context) {
 	}
 
 	token := common.GenUserToken(req.Tel)
-
 	RpcClient.Register.SetUserToken(req.Tel, token)
-	//_,token2 := RpcClient.Register.GetUserToken(req.Tel)
-	//fmt.Printf("\n存储后token:%s",token2)
 
 	errCode, userInfo := RpcClient.Register.Login(req.Tel, req.Pwd)
 	data["errcode"] = errCode

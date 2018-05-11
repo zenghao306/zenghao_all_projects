@@ -20,3 +20,12 @@ func SelfTest(ctx iris.Context) {
 	//data["succ"] = s
 	//ctx.JSON(data)
 }
+
+func Test(ctx iris.Context) {
+	data := map[string]interface{}{
+		"succ": 0,
+	}
+
+	data["succ"] = "test ok"
+	ctx.JSON(data)
+}

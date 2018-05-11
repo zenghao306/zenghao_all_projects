@@ -15,7 +15,7 @@ import (
 )
 
 type RegisterRPCCli struct {
-	conn proto.UserServceRpcClient
+	conn proto.UserServceRpcService
 }
 
 func NewRegisterRPCCli(serviceName string) (c *RegisterRPCCli, err error) {
@@ -35,7 +35,7 @@ func NewRegisterRPCCli(serviceName string) (c *RegisterRPCCli, err error) {
 	service.Init()
 
 	c = new(RegisterRPCCli)
-	c.conn = proto.NewUserServceRpcClient(serviceName, service.Client())
+	c.conn = proto.NewUserServceRpcService(serviceName, service.Client())
 
 	return
 }
@@ -149,6 +149,43 @@ func (s *RegisterRPCCli) GetUserRankingInfo(tel string) (int32, *proto.RankingIn
 	return rsp.ErrCode, rsp
 }
 
+func (s *RegisterRPCCli) GetUseRankingHdtDig(tel string) (int32, *proto.RankingInfoRes) {
+	v := &proto.TelReq{}
+	v.Tel = tel
+
+	rsp, err := s.conn.GetUseRankingHdtDig(context.TODO(), v)
+	if err != nil {
+		Log.Println(err)
+		return 500, nil
+	}
+
+	return rsp.ErrCode, rsp
+}
+
+func (s *RegisterRPCCli) GetMinePoolInfo(tel string) (int32, *proto.MinePoolRes) {
+	v := &proto.TelReq{}
+	v.Tel = tel
+
+	rsp, err := s.conn.GetMinePoolInfo(context.TODO(), v)
+	if err != nil {
+		Log.Println(err)
+		return 500, nil
+	}
+
+	return rsp.ErrCode, rsp
+}
+
+func (s *RegisterRPCCli) GetMinePoolTaskList(token string) (int32, *proto.MinePoolTaskListRes) {
+	v := &proto.TokenReq{}
+	rsp, err := s.conn.GetMinePoolTaskList(context.TODO(), v)
+	if err != nil {
+		Log.Println(err)
+		return 500, nil
+	}
+
+	return rsp.ErrCode, rsp
+}
+
 func (s *RegisterRPCCli) AppList(index int) (int32, []*proto.AppListRes_AppNameIcon) {
 	v := &proto.IndexReq{}
 	v.Index = int32(index)
@@ -160,6 +197,19 @@ func (s *RegisterRPCCli) AppList(index int) (int32, []*proto.AppListRes_AppNameI
 	}
 
 	return rsp.ErrCode, rsp.Applist
+}
+
+func (s *RegisterRPCCli) AppDetailInfo(tel string,appId int64) (int32, *proto.AppDetailInfoRes) {
+	v := &proto.AppDetailReq{}
+	v.AppId = appId
+	v.Tel = tel
+	rsp, err := s.conn.AppDetailInfo(context.TODO(), v)
+	if err != nil {
+		Log.Println(err)
+		return 500, nil
+	}
+
+	return rsp.ErrCode, rsp
 }
 
 //func (s *RegisterRPCCli) GetUser7DaysHdtList(param *proto.AccessCodeReq) (errcode int32, t []*proto.UidHdtListRes_HdtPerDay) {

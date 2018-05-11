@@ -10,6 +10,7 @@ It is generated from these files:
 It has these top-level messages:
 	LoginReq
 	IndexReq
+	AppDetailReq
 	UserInfo
 	LoginRes
 	RegisterReq
@@ -20,6 +21,9 @@ It has these top-level messages:
 	TokenRes
 	RankingInfoRes
 	AppListRes
+	AppDetailInfoRes
+	MinePoolRes
+	MinePoolTaskListRes
 */
 package external
 
@@ -28,9 +32,9 @@ import fmt "fmt"
 import math "math"
 
 import (
-	context "context"
 	client "github.com/micro/go-micro/client"
 	server "github.com/micro/go-micro/server"
+	context "context"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -51,7 +55,7 @@ var _ server.Option
 
 // Client API for UserServceRpc service
 
-type UserServceRpcClient interface {
+type UserServceRpcService interface {
 	Login(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*LoginRes, error)
 	Register(ctx context.Context, in *RegisterReq, opts ...client.CallOption) (*ReturnRes, error)
 	ModifyPwdByTel(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*ReturnRes, error)
@@ -60,29 +64,33 @@ type UserServceRpcClient interface {
 	SetUserToken(ctx context.Context, in *TokenReq, opts ...client.CallOption) (*ReturnRes, error)
 	GetUserToken(ctx context.Context, in *TelReq, opts ...client.CallOption) (*TokenRes, error)
 	GetUserRankingInfo(ctx context.Context, in *TelReq, opts ...client.CallOption) (*RankingInfoRes, error)
+	GetUseRankingHdtDig(ctx context.Context, in *TelReq, opts ...client.CallOption) (*RankingInfoRes, error)
 	AppList(ctx context.Context, in *IndexReq, opts ...client.CallOption) (*AppListRes, error)
+	AppDetailInfo(ctx context.Context, in *AppDetailReq, opts ...client.CallOption) (*AppDetailInfoRes, error)
+	GetMinePoolInfo(ctx context.Context, in *TelReq, opts ...client.CallOption) (*MinePoolRes, error)
+	GetMinePoolTaskList(ctx context.Context, in *TokenReq, opts ...client.CallOption) (*MinePoolTaskListRes, error)
 }
 
-type userServceRpcClient struct {
-	c           client.Client
-	serviceName string
+type userServceRpcService struct {
+	c    client.Client
+	name string
 }
 
-func NewUserServceRpcClient(serviceName string, c client.Client) UserServceRpcClient {
+func NewUserServceRpcService(name string, c client.Client) UserServceRpcService {
 	if c == nil {
 		c = client.NewClient()
 	}
-	if len(serviceName) == 0 {
-		serviceName = "external"
+	if len(name) == 0 {
+		name = "external"
 	}
-	return &userServceRpcClient{
-		c:           c,
-		serviceName: serviceName,
+	return &userServceRpcService{
+		c:    c,
+		name: name,
 	}
 }
 
-func (c *userServceRpcClient) Login(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*LoginRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.Login", in)
+func (c *userServceRpcService) Login(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*LoginRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.Login", in)
 	out := new(LoginRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -91,8 +99,8 @@ func (c *userServceRpcClient) Login(ctx context.Context, in *LoginReq, opts ...c
 	return out, nil
 }
 
-func (c *userServceRpcClient) Register(ctx context.Context, in *RegisterReq, opts ...client.CallOption) (*ReturnRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.Register", in)
+func (c *userServceRpcService) Register(ctx context.Context, in *RegisterReq, opts ...client.CallOption) (*ReturnRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.Register", in)
 	out := new(ReturnRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -101,8 +109,8 @@ func (c *userServceRpcClient) Register(ctx context.Context, in *RegisterReq, opt
 	return out, nil
 }
 
-func (c *userServceRpcClient) ModifyPwdByTel(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*ReturnRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.ModifyPwdByTel", in)
+func (c *userServceRpcService) ModifyPwdByTel(ctx context.Context, in *LoginReq, opts ...client.CallOption) (*ReturnRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.ModifyPwdByTel", in)
 	out := new(ReturnRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -111,8 +119,8 @@ func (c *userServceRpcClient) ModifyPwdByTel(ctx context.Context, in *LoginReq, 
 	return out, nil
 }
 
-func (c *userServceRpcClient) AddQianXunCode(ctx context.Context, in *QianxunReq, opts ...client.CallOption) (*ReturnRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.AddQianXunCode", in)
+func (c *userServceRpcService) AddQianXunCode(ctx context.Context, in *QianxunReq, opts ...client.CallOption) (*ReturnRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.AddQianXunCode", in)
 	out := new(ReturnRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -121,8 +129,8 @@ func (c *userServceRpcClient) AddQianXunCode(ctx context.Context, in *QianxunReq
 	return out, nil
 }
 
-func (c *userServceRpcClient) QianXunSnsVerify(ctx context.Context, in *QianxunReq, opts ...client.CallOption) (*ReturnRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.QianXunSnsVerify", in)
+func (c *userServceRpcService) QianXunSnsVerify(ctx context.Context, in *QianxunReq, opts ...client.CallOption) (*ReturnRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.QianXunSnsVerify", in)
 	out := new(ReturnRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -131,8 +139,8 @@ func (c *userServceRpcClient) QianXunSnsVerify(ctx context.Context, in *QianxunR
 	return out, nil
 }
 
-func (c *userServceRpcClient) SetUserToken(ctx context.Context, in *TokenReq, opts ...client.CallOption) (*ReturnRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.SetUserToken", in)
+func (c *userServceRpcService) SetUserToken(ctx context.Context, in *TokenReq, opts ...client.CallOption) (*ReturnRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.SetUserToken", in)
 	out := new(ReturnRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -141,8 +149,8 @@ func (c *userServceRpcClient) SetUserToken(ctx context.Context, in *TokenReq, op
 	return out, nil
 }
 
-func (c *userServceRpcClient) GetUserToken(ctx context.Context, in *TelReq, opts ...client.CallOption) (*TokenRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.GetUserToken", in)
+func (c *userServceRpcService) GetUserToken(ctx context.Context, in *TelReq, opts ...client.CallOption) (*TokenRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.GetUserToken", in)
 	out := new(TokenRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -151,8 +159,8 @@ func (c *userServceRpcClient) GetUserToken(ctx context.Context, in *TelReq, opts
 	return out, nil
 }
 
-func (c *userServceRpcClient) GetUserRankingInfo(ctx context.Context, in *TelReq, opts ...client.CallOption) (*RankingInfoRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.GetUserRankingInfo", in)
+func (c *userServceRpcService) GetUserRankingInfo(ctx context.Context, in *TelReq, opts ...client.CallOption) (*RankingInfoRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.GetUserRankingInfo", in)
 	out := new(RankingInfoRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -161,9 +169,49 @@ func (c *userServceRpcClient) GetUserRankingInfo(ctx context.Context, in *TelReq
 	return out, nil
 }
 
-func (c *userServceRpcClient) AppList(ctx context.Context, in *IndexReq, opts ...client.CallOption) (*AppListRes, error) {
-	req := c.c.NewRequest(c.serviceName, "UserServceRpc.AppList", in)
+func (c *userServceRpcService) GetUseRankingHdtDig(ctx context.Context, in *TelReq, opts ...client.CallOption) (*RankingInfoRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.GetUseRankingHdtDig", in)
+	out := new(RankingInfoRes)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userServceRpcService) AppList(ctx context.Context, in *IndexReq, opts ...client.CallOption) (*AppListRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.AppList", in)
 	out := new(AppListRes)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userServceRpcService) AppDetailInfo(ctx context.Context, in *AppDetailReq, opts ...client.CallOption) (*AppDetailInfoRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.AppDetailInfo", in)
+	out := new(AppDetailInfoRes)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userServceRpcService) GetMinePoolInfo(ctx context.Context, in *TelReq, opts ...client.CallOption) (*MinePoolRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.GetMinePoolInfo", in)
+	out := new(MinePoolRes)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userServceRpcService) GetMinePoolTaskList(ctx context.Context, in *TokenReq, opts ...client.CallOption) (*MinePoolTaskListRes, error) {
+	req := c.c.NewRequest(c.name, "UserServceRpc.GetMinePoolTaskList", in)
+	out := new(MinePoolTaskListRes)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
 		return nil, err
@@ -182,49 +230,88 @@ type UserServceRpcHandler interface {
 	SetUserToken(context.Context, *TokenReq, *ReturnRes) error
 	GetUserToken(context.Context, *TelReq, *TokenRes) error
 	GetUserRankingInfo(context.Context, *TelReq, *RankingInfoRes) error
+	GetUseRankingHdtDig(context.Context, *TelReq, *RankingInfoRes) error
 	AppList(context.Context, *IndexReq, *AppListRes) error
+	AppDetailInfo(context.Context, *AppDetailReq, *AppDetailInfoRes) error
+	GetMinePoolInfo(context.Context, *TelReq, *MinePoolRes) error
+	GetMinePoolTaskList(context.Context, *TokenReq, *MinePoolTaskListRes) error
 }
 
 func RegisterUserServceRpcHandler(s server.Server, hdlr UserServceRpcHandler, opts ...server.HandlerOption) {
-	s.Handle(s.NewHandler(&UserServceRpc{hdlr}, opts...))
+	type userServceRpc interface {
+		Login(ctx context.Context, in *LoginReq, out *LoginRes) error
+		Register(ctx context.Context, in *RegisterReq, out *ReturnRes) error
+		ModifyPwdByTel(ctx context.Context, in *LoginReq, out *ReturnRes) error
+		AddQianXunCode(ctx context.Context, in *QianxunReq, out *ReturnRes) error
+		QianXunSnsVerify(ctx context.Context, in *QianxunReq, out *ReturnRes) error
+		SetUserToken(ctx context.Context, in *TokenReq, out *ReturnRes) error
+		GetUserToken(ctx context.Context, in *TelReq, out *TokenRes) error
+		GetUserRankingInfo(ctx context.Context, in *TelReq, out *RankingInfoRes) error
+		GetUseRankingHdtDig(ctx context.Context, in *TelReq, out *RankingInfoRes) error
+		AppList(ctx context.Context, in *IndexReq, out *AppListRes) error
+		AppDetailInfo(ctx context.Context, in *AppDetailReq, out *AppDetailInfoRes) error
+		GetMinePoolInfo(ctx context.Context, in *TelReq, out *MinePoolRes) error
+		GetMinePoolTaskList(ctx context.Context, in *TokenReq, out *MinePoolTaskListRes) error
+	}
+	type UserServceRpc struct {
+		userServceRpc
+	}
+	h := &userServceRpcHandler{hdlr}
+	s.Handle(s.NewHandler(&UserServceRpc{h}, opts...))
 }
 
-type UserServceRpc struct {
+type userServceRpcHandler struct {
 	UserServceRpcHandler
 }
 
-func (h *UserServceRpc) Login(ctx context.Context, in *LoginReq, out *LoginRes) error {
+func (h *userServceRpcHandler) Login(ctx context.Context, in *LoginReq, out *LoginRes) error {
 	return h.UserServceRpcHandler.Login(ctx, in, out)
 }
 
-func (h *UserServceRpc) Register(ctx context.Context, in *RegisterReq, out *ReturnRes) error {
+func (h *userServceRpcHandler) Register(ctx context.Context, in *RegisterReq, out *ReturnRes) error {
 	return h.UserServceRpcHandler.Register(ctx, in, out)
 }
 
-func (h *UserServceRpc) ModifyPwdByTel(ctx context.Context, in *LoginReq, out *ReturnRes) error {
+func (h *userServceRpcHandler) ModifyPwdByTel(ctx context.Context, in *LoginReq, out *ReturnRes) error {
 	return h.UserServceRpcHandler.ModifyPwdByTel(ctx, in, out)
 }
 
-func (h *UserServceRpc) AddQianXunCode(ctx context.Context, in *QianxunReq, out *ReturnRes) error {
+func (h *userServceRpcHandler) AddQianXunCode(ctx context.Context, in *QianxunReq, out *ReturnRes) error {
 	return h.UserServceRpcHandler.AddQianXunCode(ctx, in, out)
 }
 
-func (h *UserServceRpc) QianXunSnsVerify(ctx context.Context, in *QianxunReq, out *ReturnRes) error {
+func (h *userServceRpcHandler) QianXunSnsVerify(ctx context.Context, in *QianxunReq, out *ReturnRes) error {
 	return h.UserServceRpcHandler.QianXunSnsVerify(ctx, in, out)
 }
 
-func (h *UserServceRpc) SetUserToken(ctx context.Context, in *TokenReq, out *ReturnRes) error {
+func (h *userServceRpcHandler) SetUserToken(ctx context.Context, in *TokenReq, out *ReturnRes) error {
 	return h.UserServceRpcHandler.SetUserToken(ctx, in, out)
 }
 
-func (h *UserServceRpc) GetUserToken(ctx context.Context, in *TelReq, out *TokenRes) error {
+func (h *userServceRpcHandler) GetUserToken(ctx context.Context, in *TelReq, out *TokenRes) error {
 	return h.UserServceRpcHandler.GetUserToken(ctx, in, out)
 }
 
-func (h *UserServceRpc) GetUserRankingInfo(ctx context.Context, in *TelReq, out *RankingInfoRes) error {
+func (h *userServceRpcHandler) GetUserRankingInfo(ctx context.Context, in *TelReq, out *RankingInfoRes) error {
 	return h.UserServceRpcHandler.GetUserRankingInfo(ctx, in, out)
 }
 
-func (h *UserServceRpc) AppList(ctx context.Context, in *IndexReq, out *AppListRes) error {
+func (h *userServceRpcHandler) GetUseRankingHdtDig(ctx context.Context, in *TelReq, out *RankingInfoRes) error {
+	return h.UserServceRpcHandler.GetUseRankingHdtDig(ctx, in, out)
+}
+
+func (h *userServceRpcHandler) AppList(ctx context.Context, in *IndexReq, out *AppListRes) error {
 	return h.UserServceRpcHandler.AppList(ctx, in, out)
+}
+
+func (h *userServceRpcHandler) AppDetailInfo(ctx context.Context, in *AppDetailReq, out *AppDetailInfoRes) error {
+	return h.UserServceRpcHandler.AppDetailInfo(ctx, in, out)
+}
+
+func (h *userServceRpcHandler) GetMinePoolInfo(ctx context.Context, in *TelReq, out *MinePoolRes) error {
+	return h.UserServceRpcHandler.GetMinePoolInfo(ctx, in, out)
+}
+
+func (h *userServceRpcHandler) GetMinePoolTaskList(ctx context.Context, in *TokenReq, out *MinePoolTaskListRes) error {
+	return h.UserServceRpcHandler.GetMinePoolTaskList(ctx, in, out)
 }

@@ -10,7 +10,12 @@ service UserServceRpc {
     rpc SetUserToken(TokenReq) returns (ReturnRes) {}
     rpc GetUserToken(TelReq) returns (TokenRes) {}
     rpc GetUserRankingInfo(TelReq) returns (RankingInfoRes) {}
+    rpc GetUseRankingHdtDig(TelReq) returns (RankingInfoRes) {}
     rpc AppList(IndexReq) returns (AppListRes) {}
+    rpc AppDetailInfo(AppDetailReq) returns (AppDetailInfoRes) {}
+
+    rpc GetMinePoolInfo(TelReq) returns (MinePoolRes) {}
+    rpc GetMinePoolTaskList(TokenReq) returns (MinePoolTaskListRes) {}
 }
 
 message LoginReq {
@@ -20,6 +25,11 @@ message LoginReq {
 
 message IndexReq {
     int32 index=1;
+}
+
+message AppDetailReq {
+    string tel   = 1;
+    int64  appId = 2;
 }
 
 message UserInfo{
@@ -84,8 +94,41 @@ message RankingInfoRes{
 message AppListRes{
     int32 errCode = 1;
     message AppNameIcon{
-        string AppName=1;
-        string AppIcoPath=2;
+        int64  AppId      = 1;
+        string AppName    = 2;
+        string AppIcoPath = 3;
     }
     repeated AppNameIcon Applist = 2;
 }
+
+message AppDetailInfoRes{
+    int32 errCode = 1;
+    double userAppHdt = 2;      //用户在该平台挖到的HDT数量
+    double AppHdtTotal = 3;     //开发者投放的HDT
+    string appContent = 4;      //app内容
+    repeated string AppImg = 5; //APP图片
+    string iosAddress = 6;      //IOS下载地址
+    string androidAddress = 7;  //Android下载地址
+}
+
+message MinePoolRes{
+     int32 errCode = 1;
+     double HdtSupplyLimit= 2;      //HDT矿池总量
+     double HdtTotalSupply=3;       //已产出总量
+     double AppHdtBalanceTotal=4;   //任务池余额
+     double DegreeOfDifficulty = 5; //难度系数
+ }
+
+ message MinePoolTaskListRes{
+     int32 errCode = 1;
+     message MinePoolTask{
+         string AppName        = 1;
+         string AppIcoPath     = 2;
+         int64  AppId          = 3;
+         int64  Time           = 4;
+         int32  Style          = 5; //0发布，1挖出
+         double Hdt            = 6; //额度
+         double HdtTaskBalance = 7; //任务池余额
+     }
+     repeated MinePoolTask MinePoolTasklist = 2;
+ }

@@ -2,12 +2,14 @@ package session
 
 import (
 	//"encoding/json"
-	"github.com/olahol/melody"
+	//"github.com/olahol/melody"
+	"hdt_app_go/gateway_app/http/melody"
 	"github.com/tidwall/gjson"
 	cli "hdt_app_go/gateway_app/client_msg"
 	. "hdt_app_go/gateway_app/log"
 	//. "hdt_app_go/gateway_app/rpc"
 	//proto "hdt_app_go/protcol"
+	"encoding/json"
 	"sync/atomic"
 )
 
@@ -52,4 +54,25 @@ func WebSocketHandMessage(s *melody.Session, msg []byte) {
 		return
 	}
 
+}
+
+func SendMsgToUser(uid int32, msg interface{}) bool {
+	user := GetUserSessByUid(uid)
+	if user != nil {
+		if b, err := json.Marshal(msg); err == nil {
+			MSocket.SendToSelf(b, sessions[uid])
+			return true
+		}
+	}
+	return false
+}
+
+func GetUserSessByUid(uid int32) *melody.Session {
+	//mutex_session_guard.RLock()
+	//defer mutex_session_guard.RUnlock()
+	v, ok := sessions[uid]
+	if !ok {
+		return nil
+	}
+	return v
 }
