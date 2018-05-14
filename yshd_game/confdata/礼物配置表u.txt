@@ -1,0 +1,21 @@
+序号	价格	礼物名	预览图路径	动态效果路径	category所属分类	alloc_id分配规则
+1	10	棒棒糖	礼物iOS\PresentGift_Sweet.png		0	
+2	20	果汁	礼物iOS\PresentGift_FruitJuice.png		0	
+3	50	巧克力	礼物iOS\PresentGift_Chocolate.png		0	
+4	100	冰淇淋	礼物iOS\PresentGift_Icecream.png		0	
+5	666	666	礼物iOS\PresentGift_666.png		0	
+6	100	唇印	礼物iOS\PresentGift_Kiss.png		1	
+7	200	钻戒	礼物iOS\PresentGift_Ring.png		1	
+8	10000	跑车	礼物iOS\PresentGift_Car.png	iOS礼物动效\Present_Action_Car.png	1	
+9	30000	飞机	礼物iOS\PresentGift_Airplane.png	iOS礼物动效\Present_Action_PLANE.png	1	
+10	50000	火箭	礼物iOS\PresentGift_Rocket.png	iOS礼物动效\Present_Action_Rocket.png	1	
+11	10	礼物箱	礼物iOS\PresentGift_Gift.png		2	
+12	20	真棒	礼物iOS\PresentGift_Good.png		2	
+13	50	么么哒	礼物iOS\PresentGift_Momoda.png		2	
+14	100	大便	礼物iOS\PresentGift_Shit.png		2	
+15	500	太阳	礼物iOS\PresentGift_Sun.png		2	
+16	100	香蕉	礼物iOS\PresentGift_Banana.png		3	
+17	200	小熊	礼物iOS\PresentGift_Bear.png		3	
+18	500	气球	礼物iOS\PresentGift_Balloon.png		3	
+19	1000	爱心	礼物iOS\PresentGift_Love.png		3	
+20	2000	女王	礼物iOS\PresentGift_Queen.png		3	

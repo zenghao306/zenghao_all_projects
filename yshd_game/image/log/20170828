@@ -1,0 +1,463 @@
+[DEBUG][go-blog]2017/08/28 15:46:48.242757 ys.go:189: server initializing...
+[INFO][go-blog]2017/08/28 15:46:48.242757 init_mysql.go:17: db initializing...
+[INFO][go-blog]2017/08/28 15:46:48.242757 init_mysql.go:26: t1.shangtv.cn%!(EXTRA string=17testuser, string=123456, string=17wan, string=3307)
+DbLog [info]  2017/08/28 15:46:48.370765 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_room_list]
+DbLog [info]  2017/08/28 15:46:48.798789 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user]
+DbLog [info]  2017/08/28 15:46:49.867850 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_extra]
+DbLog [info]  2017/08/28 15:46:50.345878 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_focus]
+DbLog [info]  2017/08/28 15:46:50.543889 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter]
+DbLog [info]  2017/08/28 15:46:50.700898 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter_msg]
+DbLog [info]  2017/08/28 15:46:50.857907 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_gift]
+DbLog [info]  2017/08/28 15:46:51.067919 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_record]
+DbLog [info]  2017/08/28 15:46:51.291932 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gag_record]
+DbLog [info]  2017/08/28 15:46:51.424939 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_cash_record]
+DbLog [info]  2017/08/28 15:46:51.752958 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_moon_cash_record]
+DbLog [info]  2017/08/28 15:46:51.987972 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_black]
+DbLog [info]  2017/08/28 15:46:52.089977 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ios_trade_item]
+DbLog [info]  2017/08/28 15:46:52.203984 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_android_trade_item]
+DbLog [info]  2017/08/28 15:46:52.299989 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_google_trade_item]
+DbLog [info]  2017/08/28 15:46:52.430997 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_trade]
+DbLog [info]  2017/08/28 15:46:52.761016 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_watch_record]
+DbLog [info]  2017/08/28 15:46:52.916025 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_consumer]
+DbLog [info]  2017/08/28 15:46:52.990029 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_user_exp]
+DbLog [info]  2017/08/28 15:46:53.048032 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_anchor_exp]
+DbLog [info]  2017/08/28 15:46:53.109036 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ad_mgr]
+DbLog [info]  2017/08/28 15:46:53.186040 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_sys_notice]
+DbLog [info]  2017/08/28 15:46:53.266045 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_group_weight]
+DbLog [info]  2017/08/28 15:46:53.326048 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_auth_real_info]
+DbLog [info]  2017/08/28 15:46:53.583063 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_report]
+DbLog [info]  2017/08/28 15:46:53.681068 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_action_log]
+DbLog [info]  2017/08/28 15:46:53.850078 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_version_manager]
+DbLog [info]  2017/08/28 15:46:54.150095 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_present_bank]
+DbLog [info]  2017/08/28 15:46:54.204098 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_daily_record]
+DbLog [info]  2017/08/28 15:46:54.285103 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_play_back]
+DbLog [info]  2017/08/28 15:46:54.448112 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_list]
+DbLog [info]  2017/08/28 15:46:54.791132 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_record]
+DbLog [info]  2017/08/28 15:46:55.203155 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_play_back]
+DbLog [info]  2017/08/28 15:46:55.343163 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_niu_niu_record]
+DbLog [info]  2017/08/28 15:46:55.542175 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_pv_info]
+DbLog [info]  2017/08/28 15:46:55.658182 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_task_info]
+DbLog [info]  2017/08/28 15:46:55.834192 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_task]
+DbLog [info]  2017/08/28 15:46:56.007201 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_score_exchange]
+DbLog [info]  2017/08/28 15:46:56.071205 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_commossion]
+DbLog [info]  2017/08/28 15:46:56.269216 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_item_record]
+DbLog [info]  2017/08/28 15:46:56.614236 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_item]
+DbLog [info]  2017/08/28 15:46:56.822248 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_coupons_month_record]
+DbLog [info]  2017/08/28 15:46:57.001258 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_assigned_detail]
+DbLog [info]  2017/08/28 15:46:57.119265 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_uv_info]
+DbLog [info]  2017/08/28 15:46:57.217271 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_system_variable]
+DbLog [info]  2017/08/28 15:46:57.296275 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard]
+DbLog [info]  2017/08/28 15:46:57.396281 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record]
+DbLog [info]  2017/08/28 15:46:57.542289 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record_detail]
+DbLog [info]  2017/08/28 15:46:57.639295 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_exchange_to_rice_record]
+DbLog [info]  2017/08/28 15:46:57.753301 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_bet_record]
+DbLog [info]  2017/08/28 15:46:57.870308 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` ORDER BY `price` DESC
+DbLog [info]  2017/08/28 15:46:57.882309 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` WHERE category=2  ORDER BY `weight` ASC LIMIT 3
+DbLog [info]  2017/08/28 15:46:57.892309 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item`
+DbLog [info]  2017/08/28 15:46:57.903310 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 15:46:57.912310 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_600]
+DbLog [info]  2017/08/28 15:46:57.930311 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_3000]
+DbLog [info]  2017/08/28 15:46:57.948312 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_12800]
+DbLog [info]  2017/08/28 15:46:57.965313 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_32800]
+DbLog [info]  2017/08/28 15:46:57.983314 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_64800]
+DbLog [info]  2017/08/28 15:46:58.003316 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_100000]
+DbLog [info]  2017/08/28 15:46:58.023317 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_300000]
+DbLog [info]  2017/08/28 15:46:58.042318 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_500000]
+DbLog [info]  2017/08/28 15:46:58.068319 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item`
+DbLog [info]  2017/08/28 15:46:58.078320 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 15:46:58.089321 [sql] SELECT `cid`, `consume_num`, `exp` FROM `go_config_consumer`
+DbLog [info]  2017/08/28 15:46:58.100321 [sql] SELECT `id`, `name`, `price1`, `percent1`, `price2`, `percent2`, `price3`, `percent3`, `platform_pum` FROM `go_toy_info` WHERE status=1 
+DbLog [info]  2017/08/28 15:46:58.109322 [sql] SELECT `level`, `exp` FROM `go_config_user_exp`
+DbLog [info]  2017/08/28 15:46:58.119322 [sql] SELECT `level`, `exp` FROM `go_config_anchor_exp`
+DbLog [info]  2017/08/28 15:46:58.129323 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 15:46:58.140323 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 15:46:58.148324 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 15:46:58.164325 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 15:46:58.176326 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [every_day_lowest_cash_time]
+DbLog [info]  2017/08/28 15:46:58.194327 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [niuniu_pem]
+DbLog [info]  2017/08/28 15:46:58.213328 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 15:46:58.430340 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 15:46:58.666354 [sql] SELECT `notice_id`, `content`, `status` FROM `go_config_sys_notice`
+DbLog [info]  2017/08/28 15:46:58.675354 [sql] SELECT `ad_id`, `image` FROM `go_config_ad_mgr`
+DbLog [info]  2017/08/28 15:46:58.683355 [sql] SELECT c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count as viewer FROM  (SELECT * FROM  (SELECT f.play_back_recommand_rid,g.play_url ,g.weight  as WEI FROM go_user_extra f LEFT JOIN go_play_back g ON f.play_back_recommand_rid=g.room_id WHERE play_back_recommand_rid!='' and g.hidden=0 ) a LEFT JOIN go_room_list b ON a.play_back_recommand_rid=b.room_id) c LEFT JOIN go_user d ON c.owner_id =d.uid ORDER BY c.WEI DESC,d.coupons DESC ,c.create_time  DESC
+DbLog [info]  2017/08/28 15:46:58.696355 [sql] SELECT  c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count AS viewer FROM (SELECT * FROM (SELECT  f.play_back_recommand_rid,g.play_url ,g.weight  AS WEI  FROM go_user_extra f LEFT JOIN go_multiple_play_back g ON f.play_back_recommand_rid=g.multiple_record_id WHERE play_back_recommand_type=1 AND  play_back_recommand_rid!='' AND g.hidden=0 ) a LEFT JOIN go_multiple_room_record b ON a.play_back_recommand_rid=b.id) c LEFT JOIN go_user d ON c.owner_id=d.uid
+[DEBUG][go-blog]2017/08/28 15:46:58.705356 redis_opt.go:113: redis info t1.shangtv.cn:6379
+DbLog [info]  2017/08/28 15:46:58.724357 [sql] SELECT `task_id`, `name`, `type`, `target`, `target_param`, `reward1`, `reward2` FROM `go_config_task`
+DbLog [info]  2017/08/28 15:46:58.733357 [sql] update go_room_list set statue=? ,finish_time=now() where statue=? [args] [7 1]
+[INFO][go-blog]2017/08/28 15:46:58.782360 ys.go:843: server is started...
+[INFO][go-blog]2017/08/28 15:46:58.782360 ys.go:846: server is finishd...
+DbLog [info]  2017/08/28 15:46:58.782360 [sql] SELECT `room_id`, `room_name`, `owner_id`, `create_time`, `finish_time`, `location`, `cover`, `statue`, `live_url`, `mobile_url`, `rice`, `count`, `weight`, `lock_time`, `mutiple_record_id`, `moon` FROM `go_multiple_room_list`
+[DEBUG][go-blog]2017/08/28 16:00:01.913153 ys.go:189: server initializing...
+[INFO][go-blog]2017/08/28 16:00:01.913153 init_mysql.go:17: db initializing...
+[INFO][go-blog]2017/08/28 16:00:01.913153 init_mysql.go:26: t1.shangtv.cn%!(EXTRA string=17testuser, string=123456, string=17wan, string=3307)
+DbLog [info]  2017/08/28 16:00:01.952155 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_room_list]
+DbLog [info]  2017/08/28 16:00:02.231171 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user]
+DbLog [info]  2017/08/28 16:00:02.971213 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_extra]
+DbLog [info]  2017/08/28 16:00:03.297232 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_focus]
+DbLog [info]  2017/08/28 16:00:03.421239 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter]
+DbLog [info]  2017/08/28 16:00:03.519245 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter_msg]
+DbLog [info]  2017/08/28 16:00:03.618250 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_gift]
+DbLog [info]  2017/08/28 16:00:03.757258 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_record]
+DbLog [info]  2017/08/28 16:00:03.971270 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gag_record]
+DbLog [info]  2017/08/28 16:00:04.059275 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_cash_record]
+DbLog [info]  2017/08/28 16:00:04.288289 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_moon_cash_record]
+DbLog [info]  2017/08/28 16:00:04.439297 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_black]
+DbLog [info]  2017/08/28 16:00:04.501301 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ios_trade_item]
+DbLog [info]  2017/08/28 16:00:04.572305 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_android_trade_item]
+DbLog [info]  2017/08/28 16:00:04.635308 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_google_trade_item]
+DbLog [info]  2017/08/28 16:00:04.700312 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_trade]
+DbLog [info]  2017/08/28 16:00:04.958327 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_watch_record]
+DbLog [info]  2017/08/28 16:00:05.053332 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_consumer]
+DbLog [info]  2017/08/28 16:00:05.102335 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_user_exp]
+DbLog [info]  2017/08/28 16:00:05.145338 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_anchor_exp]
+DbLog [info]  2017/08/28 16:00:05.181340 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ad_mgr]
+DbLog [info]  2017/08/28 16:00:05.229342 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_sys_notice]
+DbLog [info]  2017/08/28 16:00:05.285346 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_group_weight]
+DbLog [info]  2017/08/28 16:00:05.389352 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_auth_real_info]
+DbLog [info]  2017/08/28 16:00:05.558361 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_report]
+DbLog [info]  2017/08/28 16:00:05.620365 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_action_log]
+DbLog [info]  2017/08/28 16:00:05.733371 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_version_manager]
+DbLog [info]  2017/08/28 16:00:05.871379 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_present_bank]
+DbLog [info]  2017/08/28 16:00:05.907381 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_daily_record]
+DbLog [info]  2017/08/28 16:00:05.943383 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_play_back]
+DbLog [info]  2017/08/28 16:00:06.040389 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_list]
+DbLog [info]  2017/08/28 16:00:06.295403 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_record]
+DbLog [info]  2017/08/28 16:00:06.597421 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_play_back]
+DbLog [info]  2017/08/28 16:00:06.689426 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_niu_niu_record]
+DbLog [info]  2017/08/28 16:00:06.813433 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_pv_info]
+DbLog [info]  2017/08/28 16:00:06.954441 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_task_info]
+DbLog [info]  2017/08/28 16:00:07.072448 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_task]
+DbLog [info]  2017/08/28 16:00:07.176454 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_score_exchange]
+DbLog [info]  2017/08/28 16:00:07.216456 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_commossion]
+DbLog [info]  2017/08/28 16:00:07.318462 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_item_record]
+DbLog [info]  2017/08/28 16:00:07.546475 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_item]
+DbLog [info]  2017/08/28 16:00:07.675482 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_coupons_month_record]
+DbLog [info]  2017/08/28 16:00:07.783488 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_assigned_detail]
+DbLog [info]  2017/08/28 16:00:07.919496 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_uv_info]
+DbLog [info]  2017/08/28 16:00:07.982500 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_system_variable]
+DbLog [info]  2017/08/28 16:00:08.044503 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard]
+DbLog [info]  2017/08/28 16:00:08.105507 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record]
+DbLog [info]  2017/08/28 16:00:08.191512 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record_detail]
+DbLog [info]  2017/08/28 16:00:08.255515 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_exchange_to_rice_record]
+DbLog [info]  2017/08/28 16:00:08.341520 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_bet_record]
+DbLog [info]  2017/08/28 16:00:08.417525 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` ORDER BY `price` DESC
+DbLog [info]  2017/08/28 16:00:08.425525 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` WHERE category=2  ORDER BY `weight` ASC LIMIT 3
+DbLog [info]  2017/08/28 16:00:08.432526 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item`
+DbLog [info]  2017/08/28 16:00:08.439526 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:00:08.444526 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_600]
+DbLog [info]  2017/08/28 16:00:08.458527 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_3000]
+DbLog [info]  2017/08/28 16:00:08.472528 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_12800]
+DbLog [info]  2017/08/28 16:00:08.484529 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_32800]
+DbLog [info]  2017/08/28 16:00:08.497529 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_64800]
+DbLog [info]  2017/08/28 16:00:08.510530 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_100000]
+DbLog [info]  2017/08/28 16:00:08.538532 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_300000]
+DbLog [info]  2017/08/28 16:00:08.549532 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_500000]
+DbLog [info]  2017/08/28 16:00:08.560533 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item`
+DbLog [info]  2017/08/28 16:00:08.566533 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:00:08.573534 [sql] SELECT `cid`, `consume_num`, `exp` FROM `go_config_consumer`
+DbLog [info]  2017/08/28 16:00:08.579534 [sql] SELECT `id`, `name`, `price1`, `percent1`, `price2`, `percent2`, `price3`, `percent3`, `platform_pum` FROM `go_toy_info` WHERE status=1 
+DbLog [info]  2017/08/28 16:00:08.585534 [sql] SELECT `level`, `exp` FROM `go_config_user_exp`
+DbLog [info]  2017/08/28 16:00:08.592535 [sql] SELECT `level`, `exp` FROM `go_config_anchor_exp`
+DbLog [info]  2017/08/28 16:00:08.599535 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:00:08.604535 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:00:08.609536 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:00:08.618536 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:00:08.628537 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [every_day_lowest_cash_time]
+DbLog [info]  2017/08/28 16:00:08.638537 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [niuniu_pem]
+DbLog [info]  2017/08/28 16:00:08.650538 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:00:08.842549 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:00:09.047561 [sql] SELECT `notice_id`, `content`, `status` FROM `go_config_sys_notice`
+DbLog [info]  2017/08/28 16:00:09.053561 [sql] SELECT `ad_id`, `image` FROM `go_config_ad_mgr`
+DbLog [info]  2017/08/28 16:00:09.060562 [sql] SELECT c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count as viewer FROM  (SELECT * FROM  (SELECT f.play_back_recommand_rid,g.play_url ,g.weight  as WEI FROM go_user_extra f LEFT JOIN go_play_back g ON f.play_back_recommand_rid=g.room_id WHERE play_back_recommand_rid!='' and g.hidden=0 ) a LEFT JOIN go_room_list b ON a.play_back_recommand_rid=b.room_id) c LEFT JOIN go_user d ON c.owner_id =d.uid ORDER BY c.WEI DESC,d.coupons DESC ,c.create_time  DESC
+DbLog [info]  2017/08/28 16:00:09.069562 [sql] SELECT  c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count AS viewer FROM (SELECT * FROM (SELECT  f.play_back_recommand_rid,g.play_url ,g.weight  AS WEI  FROM go_user_extra f LEFT JOIN go_multiple_play_back g ON f.play_back_recommand_rid=g.multiple_record_id WHERE play_back_recommand_type=1 AND  play_back_recommand_rid!='' AND g.hidden=0 ) a LEFT JOIN go_multiple_room_record b ON a.play_back_recommand_rid=b.id) c LEFT JOIN go_user d ON c.owner_id=d.uid
+[DEBUG][go-blog]2017/08/28 16:00:09.075562 redis_opt.go:113: redis info t1.shangtv.cn:6379
+DbLog [info]  2017/08/28 16:00:09.090563 [sql] SELECT `task_id`, `name`, `type`, `target`, `target_param`, `reward1`, `reward2` FROM `go_config_task`
+DbLog [info]  2017/08/28 16:00:09.097564 [sql] update go_room_list set statue=? ,finish_time=now() where statue=? [args] [7 1]
+[INFO][go-blog]2017/08/28 16:00:09.138566 ys.go:843: server is started...
+[INFO][go-blog]2017/08/28 16:00:09.138566 ys.go:846: server is finishd...
+DbLog [info]  2017/08/28 16:00:09.138566 [sql] SELECT `room_id`, `room_name`, `owner_id`, `create_time`, `finish_time`, `location`, `cover`, `statue`, `live_url`, `mobile_url`, `rice`, `count`, `weight`, `lock_time`, `mutiple_record_id`, `moon` FROM `go_multiple_room_list`
+DbLog [info]  2017/08/28 16:00:12.222742 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:00:12.238743 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512012 100001 1599]
+DbLog [info]  2017/08/28 16:00:12.255744 [sql] SELECT pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '1.1.79'
+DbLog [info]  2017/08/28 16:00:30.913811 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:00:30.927812 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512030 100001 1600]
+DbLog [info]  2017/08/28 16:00:30.948813 [sql] SELECT pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '0'
+[DEBUG][go-blog]2017/08/28 16:02:19.569026 ys.go:189: server initializing...
+[INFO][go-blog]2017/08/28 16:02:19.576027 init_mysql.go:17: db initializing...
+[INFO][go-blog]2017/08/28 16:02:19.576027 init_mysql.go:26: t1.shangtv.cn%!(EXTRA string=17testuser, string=123456, string=17wan, string=3307)
+DbLog [info]  2017/08/28 16:02:19.632030 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_room_list]
+DbLog [info]  2017/08/28 16:02:20.104057 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user]
+DbLog [info]  2017/08/28 16:02:21.124115 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_extra]
+DbLog [info]  2017/08/28 16:02:21.576141 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_focus]
+DbLog [info]  2017/08/28 16:02:21.761152 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter]
+DbLog [info]  2017/08/28 16:02:21.909160 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter_msg]
+DbLog [info]  2017/08/28 16:02:22.064169 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_gift]
+DbLog [info]  2017/08/28 16:02:22.342185 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_record]
+DbLog [info]  2017/08/28 16:02:22.575198 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gag_record]
+DbLog [info]  2017/08/28 16:02:22.716206 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_cash_record]
+DbLog [info]  2017/08/28 16:02:23.025224 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_moon_cash_record]
+DbLog [info]  2017/08/28 16:02:23.251237 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_black]
+DbLog [info]  2017/08/28 16:02:23.342242 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ios_trade_item]
+DbLog [info]  2017/08/28 16:02:23.455248 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_android_trade_item]
+DbLog [info]  2017/08/28 16:02:23.544254 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_google_trade_item]
+DbLog [info]  2017/08/28 16:02:23.645259 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_trade]
+DbLog [info]  2017/08/28 16:02:24.015280 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_watch_record]
+DbLog [info]  2017/08/28 16:02:24.181290 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_consumer]
+DbLog [info]  2017/08/28 16:02:24.255294 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_user_exp]
+DbLog [info]  2017/08/28 16:02:24.310297 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_anchor_exp]
+DbLog [info]  2017/08/28 16:02:24.368301 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ad_mgr]
+DbLog [info]  2017/08/28 16:02:24.442305 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_sys_notice]
+DbLog [info]  2017/08/28 16:02:24.514309 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_group_weight]
+DbLog [info]  2017/08/28 16:02:24.570312 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_auth_real_info]
+DbLog [info]  2017/08/28 16:02:24.875330 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_report]
+DbLog [info]  2017/08/28 16:02:24.965335 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_action_log]
+DbLog [info]  2017/08/28 16:02:25.147345 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_version_manager]
+DbLog [info]  2017/08/28 16:02:25.353357 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_present_bank]
+DbLog [info]  2017/08/28 16:02:25.408360 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_daily_record]
+DbLog [info]  2017/08/28 16:02:25.463363 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_play_back]
+DbLog [info]  2017/08/28 16:02:25.621372 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_list]
+DbLog [info]  2017/08/28 16:02:26.032396 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_record]
+DbLog [info]  2017/08/28 16:02:26.335413 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_play_back]
+DbLog [info]  2017/08/28 16:02:26.465421 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_niu_niu_record]
+DbLog [info]  2017/08/28 16:02:26.633430 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_pv_info]
+DbLog [info]  2017/08/28 16:02:26.746437 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_task_info]
+DbLog [info]  2017/08/28 16:02:26.918447 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_task]
+DbLog [info]  2017/08/28 16:02:27.158460 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_score_exchange]
+DbLog [info]  2017/08/28 16:02:27.212463 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_commossion]
+DbLog [info]  2017/08/28 16:02:27.339471 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_item_record]
+DbLog [info]  2017/08/28 16:02:27.663489 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_item]
+DbLog [info]  2017/08/28 16:02:27.866501 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_coupons_month_record]
+DbLog [info]  2017/08/28 16:02:28.101514 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_assigned_detail]
+DbLog [info]  2017/08/28 16:02:28.211521 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_uv_info]
+DbLog [info]  2017/08/28 16:02:28.303526 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_system_variable]
+DbLog [info]  2017/08/28 16:02:28.377530 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard]
+DbLog [info]  2017/08/28 16:02:28.474536 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record]
+DbLog [info]  2017/08/28 16:02:28.602543 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record_detail]
+DbLog [info]  2017/08/28 16:02:28.703549 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_exchange_to_rice_record]
+DbLog [info]  2017/08/28 16:02:28.814555 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_bet_record]
+DbLog [info]  2017/08/28 16:02:28.925561 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` ORDER BY `price` DESC
+DbLog [info]  2017/08/28 16:02:28.936562 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` WHERE category=2  ORDER BY `weight` ASC LIMIT 3
+DbLog [info]  2017/08/28 16:02:28.945562 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item`
+DbLog [info]  2017/08/28 16:02:28.954563 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:02:28.964564 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_600]
+DbLog [info]  2017/08/28 16:02:28.982565 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_3000]
+DbLog [info]  2017/08/28 16:02:29.000566 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_12800]
+DbLog [info]  2017/08/28 16:02:29.020567 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_32800]
+DbLog [info]  2017/08/28 16:02:29.037568 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_64800]
+DbLog [info]  2017/08/28 16:02:29.056569 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_100000]
+DbLog [info]  2017/08/28 16:02:29.074570 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_300000]
+DbLog [info]  2017/08/28 16:02:29.172575 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_500000]
+DbLog [info]  2017/08/28 16:02:29.189576 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item`
+DbLog [info]  2017/08/28 16:02:29.198577 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:02:29.208578 [sql] SELECT `cid`, `consume_num`, `exp` FROM `go_config_consumer`
+DbLog [info]  2017/08/28 16:02:29.218578 [sql] SELECT `id`, `name`, `price1`, `percent1`, `price2`, `percent2`, `price3`, `percent3`, `platform_pum` FROM `go_toy_info` WHERE status=1 
+DbLog [info]  2017/08/28 16:02:29.227579 [sql] SELECT `level`, `exp` FROM `go_config_user_exp`
+DbLog [info]  2017/08/28 16:02:29.238579 [sql] SELECT `level`, `exp` FROM `go_config_anchor_exp`
+DbLog [info]  2017/08/28 16:02:29.249580 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:02:29.258580 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:02:29.271581 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:02:29.282582 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:02:29.292582 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [every_day_lowest_cash_time]
+DbLog [info]  2017/08/28 16:02:29.311583 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [niuniu_pem]
+DbLog [info]  2017/08/28 16:02:29.328584 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:02:29.539596 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:02:29.749608 [sql] SELECT `notice_id`, `content`, `status` FROM `go_config_sys_notice`
+DbLog [info]  2017/08/28 16:02:29.758609 [sql] SELECT `ad_id`, `image` FROM `go_config_ad_mgr`
+DbLog [info]  2017/08/28 16:02:29.765609 [sql] SELECT c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count as viewer FROM  (SELECT * FROM  (SELECT f.play_back_recommand_rid,g.play_url ,g.weight  as WEI FROM go_user_extra f LEFT JOIN go_play_back g ON f.play_back_recommand_rid=g.room_id WHERE play_back_recommand_rid!='' and g.hidden=0 ) a LEFT JOIN go_room_list b ON a.play_back_recommand_rid=b.room_id) c LEFT JOIN go_user d ON c.owner_id =d.uid ORDER BY c.WEI DESC,d.coupons DESC ,c.create_time  DESC
+DbLog [info]  2017/08/28 16:02:29.777610 [sql] SELECT  c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count AS viewer FROM (SELECT * FROM (SELECT  f.play_back_recommand_rid,g.play_url ,g.weight  AS WEI  FROM go_user_extra f LEFT JOIN go_multiple_play_back g ON f.play_back_recommand_rid=g.multiple_record_id WHERE play_back_recommand_type=1 AND  play_back_recommand_rid!='' AND g.hidden=0 ) a LEFT JOIN go_multiple_room_record b ON a.play_back_recommand_rid=b.id) c LEFT JOIN go_user d ON c.owner_id=d.uid
+[DEBUG][go-blog]2017/08/28 16:02:29.787611 redis_opt.go:113: redis info t1.shangtv.cn:6379
+DbLog [info]  2017/08/28 16:02:29.817612 [sql] SELECT `task_id`, `name`, `type`, `target`, `target_param`, `reward1`, `reward2` FROM `go_config_task`
+DbLog [info]  2017/08/28 16:02:29.827613 [sql] update go_room_list set statue=? ,finish_time=now() where statue=? [args] [7 1]
+[INFO][go-blog]2017/08/28 16:02:29.864615 ys.go:843: server is started...
+[INFO][go-blog]2017/08/28 16:02:29.864615 ys.go:846: server is finishd...
+DbLog [info]  2017/08/28 16:02:29.865615 [sql] SELECT `room_id`, `room_name`, `owner_id`, `create_time`, `finish_time`, `location`, `cover`, `statue`, `live_url`, `mobile_url`, `rice`, `count`, `weight`, `lock_time`, `mutiple_record_id`, `moon` FROM `go_multiple_room_list`
+DbLog [info]  2017/08/28 16:02:32.374759 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:02:32.405760 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512152 100001 1601]
+DbLog [info]  2017/08/28 16:02:32.433762 [sql] SELECT pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '0'
+[DEBUG][go-blog]2017/08/28 16:04:31.437569 ys.go:189: server initializing...
+[INFO][go-blog]2017/08/28 16:04:31.437569 init_mysql.go:17: db initializing...
+[INFO][go-blog]2017/08/28 16:04:31.437569 init_mysql.go:26: t1.shangtv.cn%!(EXTRA string=17testuser, string=123456, string=17wan, string=3307)
+DbLog [info]  2017/08/28 16:04:31.474571 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_room_list]
+DbLog [info]  2017/08/28 16:04:31.737586 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user]
+DbLog [info]  2017/08/28 16:04:32.499629 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_extra]
+DbLog [info]  2017/08/28 16:04:32.881651 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_focus]
+DbLog [info]  2017/08/28 16:04:33.020659 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter]
+DbLog [info]  2017/08/28 16:04:33.131666 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter_msg]
+DbLog [info]  2017/08/28 16:04:33.225671 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_gift]
+DbLog [info]  2017/08/28 16:04:33.357678 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_record]
+DbLog [info]  2017/08/28 16:04:33.559690 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gag_record]
+DbLog [info]  2017/08/28 16:04:33.644695 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_cash_record]
+DbLog [info]  2017/08/28 16:04:33.856707 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_moon_cash_record]
+DbLog [info]  2017/08/28 16:04:34.006716 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_black]
+DbLog [info]  2017/08/28 16:04:34.066719 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ios_trade_item]
+DbLog [info]  2017/08/28 16:04:34.147724 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_android_trade_item]
+DbLog [info]  2017/08/28 16:04:34.212727 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_google_trade_item]
+DbLog [info]  2017/08/28 16:04:34.274731 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_trade]
+DbLog [info]  2017/08/28 16:04:34.494743 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_watch_record]
+DbLog [info]  2017/08/28 16:04:34.658753 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_consumer]
+DbLog [info]  2017/08/28 16:04:34.703755 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_user_exp]
+DbLog [info]  2017/08/28 16:04:34.741758 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_anchor_exp]
+DbLog [info]  2017/08/28 16:04:34.777760 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ad_mgr]
+DbLog [info]  2017/08/28 16:04:34.828763 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_sys_notice]
+DbLog [info]  2017/08/28 16:04:34.880766 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_group_weight]
+DbLog [info]  2017/08/28 16:04:34.914768 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_auth_real_info]
+DbLog [info]  2017/08/28 16:04:35.095778 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_report]
+DbLog [info]  2017/08/28 16:04:35.156781 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_action_log]
+DbLog [info]  2017/08/28 16:04:35.268788 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_version_manager]
+DbLog [info]  2017/08/28 16:04:35.401795 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_present_bank]
+DbLog [info]  2017/08/28 16:04:35.442798 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_daily_record]
+DbLog [info]  2017/08/28 16:04:35.479800 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_play_back]
+DbLog [info]  2017/08/28 16:04:35.575805 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_list]
+DbLog [info]  2017/08/28 16:04:35.847821 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_record]
+DbLog [info]  2017/08/28 16:04:36.048832 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_play_back]
+DbLog [info]  2017/08/28 16:04:36.130837 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_niu_niu_record]
+DbLog [info]  2017/08/28 16:04:36.248844 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_pv_info]
+DbLog [info]  2017/08/28 16:04:36.324848 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_task_info]
+DbLog [info]  2017/08/28 16:04:36.433854 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_task]
+DbLog [info]  2017/08/28 16:04:36.544861 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_score_exchange]
+DbLog [info]  2017/08/28 16:04:36.580863 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_commossion]
+DbLog [info]  2017/08/28 16:04:36.666868 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_item_record]
+DbLog [info]  2017/08/28 16:04:36.937883 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_item]
+DbLog [info]  2017/08/28 16:04:37.095892 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_coupons_month_record]
+DbLog [info]  2017/08/28 16:04:37.232900 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_assigned_detail]
+DbLog [info]  2017/08/28 16:04:37.309905 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_uv_info]
+DbLog [info]  2017/08/28 16:04:37.371908 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_system_variable]
+DbLog [info]  2017/08/28 16:04:37.421911 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard]
+DbLog [info]  2017/08/28 16:04:37.484915 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record]
+DbLog [info]  2017/08/28 16:04:37.571919 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record_detail]
+DbLog [info]  2017/08/28 16:04:37.679926 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_exchange_to_rice_record]
+DbLog [info]  2017/08/28 16:04:37.758930 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_bet_record]
+DbLog [info]  2017/08/28 16:04:37.853936 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` ORDER BY `price` DESC
+DbLog [info]  2017/08/28 16:04:37.861936 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` WHERE category=2  ORDER BY `weight` ASC LIMIT 3
+DbLog [info]  2017/08/28 16:04:37.867936 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item`
+DbLog [info]  2017/08/28 16:04:37.873937 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:04:37.878937 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_600]
+DbLog [info]  2017/08/28 16:04:37.888938 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_3000]
+DbLog [info]  2017/08/28 16:04:37.900938 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_12800]
+DbLog [info]  2017/08/28 16:04:37.910939 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_32800]
+DbLog [info]  2017/08/28 16:04:37.924940 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_64800]
+DbLog [info]  2017/08/28 16:04:37.934940 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_100000]
+DbLog [info]  2017/08/28 16:04:37.946941 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_300000]
+DbLog [info]  2017/08/28 16:04:37.958942 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_500000]
+DbLog [info]  2017/08/28 16:04:38.049947 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item`
+DbLog [info]  2017/08/28 16:04:38.056947 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:04:38.063948 [sql] SELECT `cid`, `consume_num`, `exp` FROM `go_config_consumer`
+DbLog [info]  2017/08/28 16:04:38.068948 [sql] SELECT `id`, `name`, `price1`, `percent1`, `price2`, `percent2`, `price3`, `percent3`, `platform_pum` FROM `go_toy_info` WHERE status=1 
+DbLog [info]  2017/08/28 16:04:38.073948 [sql] SELECT `level`, `exp` FROM `go_config_user_exp`
+DbLog [info]  2017/08/28 16:04:38.080949 [sql] SELECT `level`, `exp` FROM `go_config_anchor_exp`
+DbLog [info]  2017/08/28 16:04:38.086949 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:04:38.091949 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:04:38.096950 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:04:38.103950 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:04:38.113951 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [every_day_lowest_cash_time]
+DbLog [info]  2017/08/28 16:04:38.124951 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [niuniu_pem]
+DbLog [info]  2017/08/28 16:04:38.134952 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:04:38.325963 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:04:38.521974 [sql] SELECT `notice_id`, `content`, `status` FROM `go_config_sys_notice`
+DbLog [info]  2017/08/28 16:04:38.528974 [sql] SELECT `ad_id`, `image` FROM `go_config_ad_mgr`
+DbLog [info]  2017/08/28 16:04:38.533975 [sql] SELECT c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count as viewer FROM  (SELECT * FROM  (SELECT f.play_back_recommand_rid,g.play_url ,g.weight  as WEI FROM go_user_extra f LEFT JOIN go_play_back g ON f.play_back_recommand_rid=g.room_id WHERE play_back_recommand_rid!='' and g.hidden=0 ) a LEFT JOIN go_room_list b ON a.play_back_recommand_rid=b.room_id) c LEFT JOIN go_user d ON c.owner_id =d.uid ORDER BY c.WEI DESC,d.coupons DESC ,c.create_time  DESC
+DbLog [info]  2017/08/28 16:04:38.540975 [sql] SELECT  c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count AS viewer FROM (SELECT * FROM (SELECT  f.play_back_recommand_rid,g.play_url ,g.weight  AS WEI  FROM go_user_extra f LEFT JOIN go_multiple_play_back g ON f.play_back_recommand_rid=g.multiple_record_id WHERE play_back_recommand_type=1 AND  play_back_recommand_rid!='' AND g.hidden=0 ) a LEFT JOIN go_multiple_room_record b ON a.play_back_recommand_rid=b.id) c LEFT JOIN go_user d ON c.owner_id=d.uid
+[DEBUG][go-blog]2017/08/28 16:04:38.546975 redis_opt.go:113: redis info t1.shangtv.cn:6379
+DbLog [info]  2017/08/28 16:04:38.572977 [sql] SELECT `task_id`, `name`, `type`, `target`, `target_param`, `reward1`, `reward2` FROM `go_config_task`
+DbLog [info]  2017/08/28 16:04:38.579977 [sql] update go_room_list set statue=? ,finish_time=now() where statue=? [args] [7 1]
+[INFO][go-blog]2017/08/28 16:04:38.612979 ys.go:843: server is started...
+[INFO][go-blog]2017/08/28 16:04:38.612979 ys.go:846: server is finishd...
+DbLog [info]  2017/08/28 16:04:38.613979 [sql] SELECT `room_id`, `room_name`, `owner_id`, `create_time`, `finish_time`, `location`, `cover`, `statue`, `live_url`, `mobile_url`, `rice`, `count`, `weight`, `lock_time`, `mutiple_record_id`, `moon` FROM `go_multiple_room_list`
+DbLog [info]  2017/08/28 16:04:49.386595 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:04:49.401596 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512289 100001 1602]
+DbLog [info]  2017/08/28 16:04:49.421597 [sql] SELECT channel_id,version,pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '0'
+[DEBUG][go-blog]2017/08/28 16:07:38.821286 ys.go:189: server initializing...
+[INFO][go-blog]2017/08/28 16:07:38.830287 init_mysql.go:17: db initializing...
+[INFO][go-blog]2017/08/28 16:07:38.830287 init_mysql.go:26: t1.shangtv.cn%!(EXTRA string=17testuser, string=123456, string=17wan, string=3307)
+DbLog [info]  2017/08/28 16:07:38.877290 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_room_list]
+DbLog [info]  2017/08/28 16:07:39.340316 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user]
+DbLog [info]  2017/08/28 16:07:40.293371 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_extra]
+DbLog [info]  2017/08/28 16:07:40.753397 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_focus]
+DbLog [info]  2017/08/28 16:07:40.936407 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter]
+DbLog [info]  2017/08/28 16:07:41.076415 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_letter_msg]
+DbLog [info]  2017/08/28 16:07:41.218423 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_gift]
+DbLog [info]  2017/08/28 16:07:41.417435 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_record]
+DbLog [info]  2017/08/28 16:07:41.615446 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gag_record]
+DbLog [info]  2017/08/28 16:07:41.742453 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_cash_record]
+DbLog [info]  2017/08/28 16:07:42.060472 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_moon_cash_record]
+DbLog [info]  2017/08/28 16:07:42.353488 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_black]
+DbLog [info]  2017/08/28 16:07:42.442493 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ios_trade_item]
+DbLog [info]  2017/08/28 16:07:42.553500 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_android_trade_item]
+DbLog [info]  2017/08/28 16:07:42.639505 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_google_trade_item]
+DbLog [info]  2017/08/28 16:07:42.733510 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_trade]
+DbLog [info]  2017/08/28 16:07:43.044528 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_watch_record]
+DbLog [info]  2017/08/28 16:07:43.193536 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_consumer]
+DbLog [info]  2017/08/28 16:07:43.331544 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_user_exp]
+DbLog [info]  2017/08/28 16:07:43.383547 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_anchor_exp]
+DbLog [info]  2017/08/28 16:07:43.441551 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_ad_mgr]
+DbLog [info]  2017/08/28 16:07:43.509555 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_sys_notice]
+DbLog [info]  2017/08/28 16:07:43.578558 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_group_weight]
+DbLog [info]  2017/08/28 16:07:43.630561 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_auth_real_info]
+DbLog [info]  2017/08/28 16:07:43.873575 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_report]
+DbLog [info]  2017/08/28 16:07:43.963580 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_action_log]
+DbLog [info]  2017/08/28 16:07:44.123590 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_version_manager]
+DbLog [info]  2017/08/28 16:07:44.374604 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_present_bank]
+DbLog [info]  2017/08/28 16:07:44.430607 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_daily_record]
+DbLog [info]  2017/08/28 16:07:44.485610 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_play_back]
+DbLog [info]  2017/08/28 16:07:44.632619 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_list]
+DbLog [info]  2017/08/28 16:07:44.961638 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_room_record]
+DbLog [info]  2017/08/28 16:07:45.253654 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_multiple_play_back]
+DbLog [info]  2017/08/28 16:07:45.371661 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_niu_niu_record]
+DbLog [info]  2017/08/28 16:07:45.585673 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_pv_info]
+DbLog [info]  2017/08/28 16:07:45.696680 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_task_info]
+DbLog [info]  2017/08/28 16:07:45.859689 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_task]
+DbLog [info]  2017/08/28 16:07:46.009698 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_score_exchange]
+DbLog [info]  2017/08/28 16:07:46.060700 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_commossion]
+DbLog [info]  2017/08/28 16:07:46.179707 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_item_record]
+DbLog [info]  2017/08/28 16:07:46.480724 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_item]
+DbLog [info]  2017/08/28 16:07:46.758740 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_coupons_month_record]
+DbLog [info]  2017/08/28 16:07:46.938751 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_gift_assigned_detail]
+DbLog [info]  2017/08/28 16:07:47.047757 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_uv_info]
+DbLog [info]  2017/08/28 16:07:47.137762 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_config_system_variable]
+DbLog [info]  2017/08/28 16:07:47.208766 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard]
+DbLog [info]  2017/08/28 16:07:47.303772 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record]
+DbLog [info]  2017/08/28 16:07:47.429779 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_guard_record_detail]
+DbLog [info]  2017/08/28 16:07:47.513784 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_exchange_to_rice_record]
+DbLog [info]  2017/08/28 16:07:47.705795 [sql] SELECT `TABLE_NAME` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=? and `TABLE_NAME`=? [args] [17wan go_user_bet_record]
+DbLog [info]  2017/08/28 16:07:47.815801 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` ORDER BY `price` DESC
+DbLog [info]  2017/08/28 16:07:47.827802 [sql] SELECT `gift_id`, `type`, `price`, `name`, `icon`, `pic`, `category`, `dynamic`, `weight` FROM `go_config_gift` WHERE category=2  ORDER BY `weight` ASC LIMIT 3
+DbLog [info]  2017/08/28 16:07:47.835802 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item`
+DbLog [info]  2017/08/28 16:07:47.843802 [sql] SELECT `item_id`, `describe`, `money`, `diamond` FROM `go_config_android_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:07:47.851803 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_600]
+DbLog [info]  2017/08/28 16:07:47.868804 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_3000]
+DbLog [info]  2017/08/28 16:07:47.889805 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_12800]
+DbLog [info]  2017/08/28 16:07:47.906806 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_32800]
+DbLog [info]  2017/08/28 16:07:47.922807 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_64800]
+DbLog [info]  2017/08/28 16:07:47.938808 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_100000]
+DbLog [info]  2017/08/28 16:07:47.954809 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_300000]
+DbLog [info]  2017/08/28 16:07:47.974810 [sql] SELECT `item_id`, `money_type`, `extra_num`, `status`, `begin_time`, `finish_time` FROM `go_charge_active` WHERE item_id=? LIMIT 1 [args] [gold_500000]
+DbLog [info]  2017/08/28 16:07:47.990811 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item`
+DbLog [info]  2017/08/28 16:07:48.001811 [sql] SELECT `item_id`, `describe`, `money`, `diamond`, `category` FROM `go_config_ios_trade_item` ORDER BY money
+DbLog [info]  2017/08/28 16:07:48.011812 [sql] SELECT `cid`, `consume_num`, `exp` FROM `go_config_consumer`
+DbLog [info]  2017/08/28 16:07:48.021813 [sql] SELECT `id`, `name`, `price1`, `percent1`, `price2`, `percent2`, `price3`, `percent3`, `platform_pum` FROM `go_toy_info` WHERE status=1 
+DbLog [info]  2017/08/28 16:07:48.029813 [sql] SELECT `level`, `exp` FROM `go_config_user_exp`
+DbLog [info]  2017/08/28 16:07:48.038814 [sql] SELECT `level`, `exp` FROM `go_config_anchor_exp`
+DbLog [info]  2017/08/28 16:07:48.055815 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:07:48.062815 [sql] SELECT `diamond`, `score` FROM `go_config_score_exchange`
+DbLog [info]  2017/08/28 16:07:48.070815 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:07:48.079816 [sql] SELECT `item_id`, `name`, `title`, `detail`, `icon`, `moon`, `stock`, `shelves`, `money`, `status` FROM `go_config_item`
+DbLog [info]  2017/08/28 16:07:48.090817 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [every_day_lowest_cash_time]
+DbLog [info]  2017/08/28 16:07:48.108818 [sql] SELECT `variable_name`, `value_int`, `value_float` FROM `go_config_system_variable` WHERE variable_name=? LIMIT 1 [args] [niuniu_pem]
+DbLog [info]  2017/08/28 16:07:48.132819 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:07:48.333830 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE robot=? [args] [true]
+DbLog [info]  2017/08/28 16:07:48.526841 [sql] SELECT `notice_id`, `content`, `status` FROM `go_config_sys_notice`
+DbLog [info]  2017/08/28 16:07:48.536842 [sql] SELECT `ad_id`, `image` FROM `go_config_ad_mgr`
+DbLog [info]  2017/08/28 16:07:48.544843 [sql] SELECT c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count as viewer FROM  (SELECT * FROM  (SELECT f.play_back_recommand_rid,g.play_url ,g.weight  as WEI FROM go_user_extra f LEFT JOIN go_play_back g ON f.play_back_recommand_rid=g.room_id WHERE play_back_recommand_rid!='' and g.hidden=0 ) a LEFT JOIN go_room_list b ON a.play_back_recommand_rid=b.room_id) c LEFT JOIN go_user d ON c.owner_id =d.uid ORDER BY c.WEI DESC,d.coupons DESC ,c.create_time  DESC
+DbLog [info]  2017/08/28 16:07:48.555843 [sql] SELECT  c.room_id,c.room_name,c.owner_id,c.location,c.cover,c.play_url AS live_url,d.nick_name,d.sex,d.image,c.count AS viewer FROM (SELECT * FROM (SELECT  f.play_back_recommand_rid,g.play_url ,g.weight  AS WEI  FROM go_user_extra f LEFT JOIN go_multiple_play_back g ON f.play_back_recommand_rid=g.multiple_record_id WHERE play_back_recommand_type=1 AND  play_back_recommand_rid!='' AND g.hidden=0 ) a LEFT JOIN go_multiple_room_record b ON a.play_back_recommand_rid=b.id) c LEFT JOIN go_user d ON c.owner_id=d.uid
+[DEBUG][go-blog]2017/08/28 16:07:48.563844 redis_opt.go:113: redis info t1.shangtv.cn:6379
+DbLog [info]  2017/08/28 16:07:48.590845 [sql] SELECT `task_id`, `name`, `type`, `target`, `target_param`, `reward1`, `reward2` FROM `go_config_task`
+DbLog [info]  2017/08/28 16:07:48.600846 [sql] update go_room_list set statue=? ,finish_time=now() where statue=? [args] [7 1]
+[INFO][go-blog]2017/08/28 16:07:48.641848 ys.go:843: server is started...
+[INFO][go-blog]2017/08/28 16:07:48.641848 ys.go:846: server is finishd...
+DbLog [info]  2017/08/28 16:07:48.641848 [sql] SELECT `room_id`, `room_name`, `owner_id`, `create_time`, `finish_time`, `location`, `cover`, `statue`, `live_url`, `mobile_url`, `rice`, `count`, `weight`, `lock_time`, `mutiple_record_id`, `moon` FROM `go_multiple_room_list`
+DbLog [info]  2017/08/28 16:07:52.829088 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:07:52.850089 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512472 100001 1603]
+DbLog [info]  2017/08/28 16:07:52.878090 [sql] SELECT channel_id,version,pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '0'
+DbLog [info]  2017/08/28 16:08:12.199195 [sql] SELECT `uid`, `account`, `open_id`, `platform`, `tel`, `nick_name`, `pwd`, `sex`, `user_level`, `anchor_level`, `user_exp`, `anchor_exp`, `image`, `diamond`, `location`, `focus`, `fans`, `coupons`, `frozen_coupons`, `thaw_time`, `score`, `moon`, `push`, `signature`, `token`, `expire_time`, `robot`, `watch_id`, `new_pay`, `new_pay_time`, `group_id`, `forbid`, `forbid_time`, `auth_real_info`, `register_time`, `account_type`, `forbid_powers`, `forbid_powers_time`, `register_channel`, `device`, `register_from`, `can_link_mic`, `admin_id`, `imei`, `version` FROM `go_user` WHERE uid=? LIMIT 1 [args] [100001]
+DbLog [info]  2017/08/28 16:08:12.297201 [sql] UPDATE `go_user` SET `expire_time` = ?, `version` = `version` + 1 WHERE (uid=?) AND `version` = ? [args] [1504512492 100001 1604]
+DbLog [info]  2017/08/28 16:08:12.322203 [sql] SELECT channel_id,version,pay_type,cash_moon_switch,model FROM php_channel_version_config WHERE channel_id = '5926707307fe65561d000dd9' && version = '1.1.79'

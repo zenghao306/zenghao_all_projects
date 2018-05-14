@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Melody example: chatting</title>
+  </head>
+
+  <style>
+    #chat {
+      text-align: left;
+      background: #f1f1f1;
+      width: 500px;
+      min-height: 300px;
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <center>
+      <h3 id="name"></h3>
+      <pre id="chat"></pre>
+      <input placeholder="say something" id="text" type="text">
+    </center>
+
+    <script>
+  
+  //    var url = "ws://" + window.location.host + window.location.pathname + "/ws?channel=web";
+          //var url = "ws://" + window.location.host + window.location.pathname + "/ws?uid=1293&token=4b457231e27ccd2bf913c7ed268f9133";
+          //
+          //var url = "ws://" + window.location.host + window.location.pathname + "/ws?uid=1293&token=4b457231e27ccd2bf913c7ed268f9133";
+           var url="ws://shangtv.cn:3000/channel/307146707715631740/ws?uid=1286&token=35040c3349be4fcd5c2361770c51ce22"
+	  alert(url);
+      //var url = "ws://" + "shangtv.cn:3000" + window.location.pathname + "/ws";
+     //  var url = "ws://" + "localhost:3000" + "/chat/join"+ "/11" + "/ws";
+    // alert(url);
+     // var url="ws://shangtv.cn:3000/channel/307146707715631740/ws?uid=15411111609&token=15411111609"
+   //   var url="ws://shangtv.cn:3000/channel/197146707733828283/ws"
+      var ws = new WebSocket(url);
+
+      //ws.send("hello")
+      var name = "Guest" + Math.floor(Math.random() * 1000);
+      var channelName = window.location.pathname.split("/")[2];
+
+      document.getElementById("name").innerText = "Channel: " + channelName;
+
+      var chat = document.getElementById("chat");
+      var text = document.getElementById("text");
+
+      var now = function () {
+        var iso = new Date().toISOString();
+        return iso.split("T")[1].split(".")[0];
+      };
+      ws.onopen = function(evt) {
+        alert("suc")
+      };
+         
+      ws.onmessage = function (msg) {
+        var line =  now() + " " + msg.data + "\n";
+        chat.innerText += line;
+      };
+
+      text.onkeydown = function (e) {
+        if (e.keyCode === 13 && text.value !== "") {
+        //  alert(name);
+          ws.send("<" + name + "> " + text.value);
+          text.value = "";
+        }
+      };
+
+    </script>
+  </body>
+</html>

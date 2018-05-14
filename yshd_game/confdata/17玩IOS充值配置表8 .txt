@@ -1,0 +1,6 @@
+item_id	describe	money	diamond
+17paly_gold_100	100金币	100	100
+17play_gold_600	600金币	600	600
+17play_gold_3000	3000金币	3000	3000
+17play_gold_9800	9800金币	9800	9800
+17play_gold_19800	19800金币	19800	19800
