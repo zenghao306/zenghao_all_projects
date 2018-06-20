@@ -1,0 +1,7 @@
+代码包含两个进程：gateway_app和appmeta（分别编译，分别部署）
+路由网关文件在gateway_app/http下http.go
+接口最终通过gateway_app/rpc/client下register.go文件里通过rpc方式调用appmeta进程的函数进行处理
+
+客户端的实现在appmeta/rpc/svr下的.svr文件进行处理
+
+protcol里面制定进程间的通信协议（只需修改gateway2app.proto后运行run.sh即可自动生成其它几个go文件）
