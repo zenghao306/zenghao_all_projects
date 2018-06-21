@@ -1,6 +1,7 @@
 package db
 
 import (
+	"encoding/binary"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/core"
@@ -9,20 +10,19 @@ import (
 	"hdt_app_go/appmeta/model"
 	"hdt_app_go/common"
 	proto "hdt_app_go/protcol"
-	"sync"
-	"time"
-	"encoding/binary"
 	"math"
 	"strconv"
+	"sync"
+	"time"
 )
 
 var mutex_mysql sync.Mutex
 
-const
-(
+const (
 	APP_NUMBER_PER_PAGE = 10
-	SERVER_BASE_PATH = "http://admin.hudt.io/public/static/upload/img/"
+	SERVER_BASE_PATH    = "http://admin.hudt.io/public/static/upload/img/"
 )
+
 func NewMysql(server, username, password, dbName, dbPort string) *xorm.Engine {
 	//common.Log.Info("db initializing...")
 	var err error
@@ -212,6 +212,7 @@ func (d *Dao) GetHdtPercent() float64 {
 
 const Pi = 3.14
 const BASE_DEGREEOFDIFFICULTY = 20
+
 //计算难度系数
 func (d *Dao) GetHdtDegreeOfDifficulty() float64 {
 	p := d.GetHdtPercent()
@@ -299,7 +300,7 @@ func (d *Dao) GetAPPIconNameList(index int32) (err_ int32, lis []*proto.AppListR
 		temp := &proto.AppListRes_AppNameIcon{}
 		temp.AppIcoPath = SERVER_BASE_PATH + ss["appIcoPath"]
 		temp.AppName = ss["appName"]
-		appId ,_:= strconv.ParseInt(ss["appId"], 10, 64)
+		appId, _ := strconv.ParseInt(ss["appId"], 10, 64)
 		temp.AppId = appId
 		icons = append(icons, temp) //追加到icons
 	}
@@ -309,7 +310,7 @@ func (d *Dao) GetAPPIconNameList(index int32) (err_ int32, lis []*proto.AppListR
 
 //获取任务-发布记录
 func (d *Dao) GetMinePoolTaskReleaseList() (err_ int32, lis []*proto.MinePoolTaskListRes_MinePoolTask) {
-	var hdtBalance_,deliveryNumber_ float64
+	var hdtBalance_, deliveryNumber_ float64
 	mutex_mysql.Lock()
 	defer mutex_mysql.Unlock()
 
@@ -346,7 +347,7 @@ func (d *Dao) GetMinePoolTaskReleaseList() (err_ int32, lis []*proto.MinePoolTas
 		temp.HdtTaskBalance = hdtBalance2
 
 		temp.AppName = ss["appName"]
-		appId ,_:= strconv.ParseInt(ss["appId"], 10, 64)
+		appId, _ := strconv.ParseInt(ss["appId"], 10, 64)
 		temp.AppId = appId
 		temp.AppIcoPath = SERVER_BASE_PATH + ss["appIcoPath"]
 
@@ -373,14 +374,14 @@ func (d *Dao) GetMinePoolTaskReleaseList() (err_ int32, lis []*proto.MinePoolTas
 
 //获取任务-挖矿记录
 func (d *Dao) GetMinePoolTaskDigList() (err_ int32, lis []*proto.MinePoolTaskListRes_MinePoolTask) {
-	var hdtBalance_,hdt_ float64
+	var hdtBalance_, hdt_ float64
 	mutex_mysql.Lock()
 	defer mutex_mysql.Unlock()
 
 	stdtime := time.Now()
-	yestodayTime := time.Unix(stdtime.Unix() - 24*3600, 0)
+	yestodayTime := time.Unix(stdtime.Unix()-24*3600, 0)
 
-	sql := fmt.Sprintf("SELECT b.appId,b.appIcoPath,b.hdtBalance,b.appName,b.`status`,SUM(a.hdt) hdt,a.accounts_time_end time FROM go_action_accounts_record a LEFT JOIN php_app b ON a.appid = b.appCode WHERE a.accounts_time_end > %d AND a.accounts_time_end <= %d GROUP BY a.appid ",yestodayTime.Unix(), stdtime.Unix())
+	sql := fmt.Sprintf("SELECT b.appId,b.appIcoPath,b.hdtBalance,b.appName,b.`status`,SUM(a.hdt) hdt,a.accounts_time_end time FROM go_action_accounts_record a LEFT JOIN php_app b ON a.appid = b.appCode WHERE a.accounts_time_end > %d AND a.accounts_time_end <= %d GROUP BY a.appid ", yestodayTime.Unix(), stdtime.Unix())
 	rowArray, err := d.mysqlCli.Query(sql)
 	if err != nil {
 		Log.Err(err)
@@ -413,7 +414,7 @@ func (d *Dao) GetMinePoolTaskDigList() (err_ int32, lis []*proto.MinePoolTaskLis
 		temp.HdtTaskBalance = hdtBalance2
 
 		temp.AppName = ss["appName"]
-		appId ,_:= strconv.ParseInt(ss["appId"], 10, 64)
+		appId, _ := strconv.ParseInt(ss["appId"], 10, 64)
 		temp.AppId = appId
 		temp.AppIcoPath = SERVER_BASE_PATH + ss["appIcoPath"]
 
@@ -439,10 +440,10 @@ func (d *Dao) GetMinePoolTaskDigList() (err_ int32, lis []*proto.MinePoolTaskLis
 }
 
 //获取用户在对应appId上挖到的HDT数量
-func (d *Dao) GetUserAppHdt(appId int64,tel string) (int32, float64) {
+func (d *Dao) GetUserAppHdt(appId int64, tel string) (int32, float64) {
 	var sum_ float64
 
-	sql := fmt.Sprintf("SELECT ifnull(FORMAT(sum(hdt),5),0) hdt_sum FROM (SELECT a.appid,a.uid,a.hdt,b.tel FROM go_action_accounts_record a LEFT JOIN go_access_code b ON a.appid = b.appid AND a.uid = b.uid WHERE a.appid = %d AND a.hdt != 0 AND b.tel != '') c WHERE c.tel = '%s'",appId, tel)
+	sql := fmt.Sprintf("SELECT ifnull(FORMAT(sum(hdt),5),0) hdt_sum FROM (SELECT a.appid,a.uid,a.hdt,b.tel FROM go_action_accounts_record a LEFT JOIN go_access_code b ON a.appid = b.appid AND a.uid = b.uid WHERE a.appid = %d AND a.hdt != 0 AND b.tel != '') c WHERE c.tel = '%s'", appId, tel)
 	rowArray, err := d.mysqlCli.Query(sql)
 	if err != nil {
 		Log.Err(err)
@@ -467,7 +468,7 @@ func (d *Dao) GetUserAppHdt(appId int64,tel string) (int32, float64) {
 func (d *Dao) GetAppHdtTotal(appId int64) (int32, float64) {
 	var sum_ float64
 
-	sql := fmt.Sprintf("SELECT ifnull(FORMAT(sum(deliveryNumber),5),0) sum_deliveryNumber FROM (SELECT a.appId,appCode,deliveryNumber,b.`status` FROM php_app a LEFT JOIN php_app_delivery b ON a.appId = b.appId WHERE a.appId = %d AND b.`status` = 'success') c",appId)
+	sql := fmt.Sprintf("SELECT ifnull(FORMAT(sum(deliveryNumber),5),0) sum_deliveryNumber FROM (SELECT a.appId,appCode,deliveryNumber,b.`status` FROM php_app a LEFT JOIN php_app_delivery b ON a.appId = b.appId WHERE a.appId = %d AND b.`status` = 'success') c", appId)
 	rowArray, err := d.mysqlCli.Query(sql)
 	if err != nil {
 		Log.Err(err)
@@ -493,6 +494,7 @@ func Float64frombytes(bytes []byte) float64 {
 	float := math.Float64frombits(bits)
 	return float
 }
+
 //获取APP开发者投放的HDT
 func (d *Dao) GetAppHdtBalanceTotal() (int32, float64) {
 	var sum_ float64
@@ -509,7 +511,7 @@ func (d *Dao) GetAppHdtBalanceTotal() (int32, float64) {
 	if len(rowArray) == 1 {
 		sum, ok := rowArray[0]["sum_hdtBalance"]
 		if ok {
-			sum_ =  common.BytesToFloat64(sum)
+			sum_ = common.BytesToFloat64(sum)
 			f := fmt.Sprintf("%.5f", sum_)
 			sum2 := common.ParseFloat(f)
 
@@ -523,14 +525,13 @@ func (d *Dao) GetAppHdtBalanceTotal() (int32, float64) {
 	return proto.ERR_OK, sum_
 }
 
-func (d *Dao) GetAppContent(appId int64) (int32, string,string,string) {
-	sql := fmt.Sprintf("SELECT appContent,iosAddress,androidAddress FROM php_app a LEFT JOIN php_app_content b ON a.appId = b.appId WHERE a.appId = %d",appId)
+func (d *Dao) GetAppContent(appId int64) (int32, string, string, string) {
+	sql := fmt.Sprintf("SELECT appContent,iosAddress,androidAddress FROM php_app a LEFT JOIN php_app_content b ON a.appId = b.appId WHERE a.appId = %d", appId)
 	rowArray, err := d.mysqlCli.Query(sql)
 	if err != nil {
 		Log.Err(err)
-		return proto.ERR_UNKNOWN, "","",""
+		return proto.ERR_UNKNOWN, "", "", ""
 	}
-
 
 	if len(rowArray) == 1 {
 		return proto.ERR_OK, common.BytesToString(rowArray[0]["appContent"]),
@@ -538,7 +539,7 @@ func (d *Dao) GetAppContent(appId int64) (int32, string,string,string) {
 			common.BytesToString(rowArray[0]["androidAddress"])
 	}
 
-	return proto.ERR_OK, "","",""
+	return proto.ERR_OK, "", "", ""
 }
 
 func (d *Dao) GeAPPImageList(appId int64) (err_ int32, lis []string) {

@@ -62,10 +62,11 @@ func AppList(ctx iris.Context) {
 }
 
 type AppDetailInfoReq struct {
-	Tel   string `json:"tel"`   //注册手机号
-	Token string `json:"token"` //密码
-	AppId int64  `json:"app_id"`   //AppId
+	Tel   string `json:"tel"`    //注册手机号
+	Token string `json:"token"`  //密码
+	AppId int64  `json:"app_id"` //AppId
 }
+
 //AppDetailInfo
 func AppDetailInfo(ctx iris.Context) {
 	data := map[string]interface{}{
@@ -103,7 +104,7 @@ func AppDetailInfo(ctx iris.Context) {
 		return
 	}
 
-	errCode, rsp := RpcClient.Register.AppDetailInfo(req.Tel,req.AppId)
+	errCode, rsp := RpcClient.Register.AppDetailInfo(req.Tel, req.AppId)
 	data["errcode"] = errCode
 	if errCode == proto.ERR_OK {
 		data["user_app_hdt"] = rsp.UserAppHdt

@@ -199,7 +199,7 @@ func (s *RegisterRPCCli) AppList(index int) (int32, []*proto.AppListRes_AppNameI
 	return rsp.ErrCode, rsp.Applist
 }
 
-func (s *RegisterRPCCli) AppDetailInfo(tel string,appId int64) (int32, *proto.AppDetailInfoRes) {
+func (s *RegisterRPCCli) AppDetailInfo(tel string, appId int64) (int32, *proto.AppDetailInfoRes) {
 	v := &proto.AppDetailReq{}
 	v.AppId = appId
 	v.Tel = tel

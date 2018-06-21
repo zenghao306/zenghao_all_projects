@@ -95,7 +95,7 @@ func (d *Dao) QianXunSnsVerify(tel string, snsText string) int32 {
 }
 
 func (d *Dao) DelUserToken(tel string) {
-	err := d.redisCli.Del(_keyToken+tel).Err()
+	err := d.redisCli.Del(_keyToken + tel).Err()
 	if err == redis.Nil {
 		return
 	} else if err != nil {
@@ -199,15 +199,15 @@ func (d *Dao) SetHourRankingOfHdtDig() {
 }
 
 type MinePoolTask struct {
-	AppName string
-	AppIcoPath string
-	AppId int64
-	Time int64
-	Hdt float64
+	AppName        string
+	AppIcoPath     string
+	AppId          int64
+	Time           int64
+	Hdt            float64
 	HdtTaskBalance float64
 }
 
-func (d *Dao) GetMinePoolTaskDigInfo()( lis []*proto.MinePoolTaskListRes_MinePoolTask) {
+func (d *Dao) GetMinePoolTaskDigInfo() (lis []*proto.MinePoolTaskListRes_MinePoolTask) {
 	exit := d.redisCli.Exists(KeyHourRankingOfHdtDig).Val()
 	if exit == 0 { //如果缓存数据不存在则重新获取并存储到redis里
 		d.SetMinePoolTaskDigInfo()
@@ -243,38 +243,38 @@ func (d *Dao) GetMinePoolTaskDigInfo()( lis []*proto.MinePoolTaskListRes_MinePoo
 
 //获取挖矿排行榜数据并缓存到redis
 func (d *Dao) SetMinePoolTaskDigInfo() {
-		_, list := d.GetMinePoolTaskDigList()
-		err := d.redisCli.Del(KeyHourRankingOfHdtDig).Err()
+	_, list := d.GetMinePoolTaskDigList()
+	err := d.redisCli.Del(KeyHourRankingOfHdtDig).Err()
+	if err != nil {
+		Log.Err(err.Error())
+		return
+	}
+
+	for _, v := range list {
+		var data MinePoolTask
+		data.AppName = v.AppName
+		data.AppIcoPath = v.AppIcoPath
+		data.AppId = v.AppId
+		data.Time = v.Time
+		data.Hdt = v.Hdt
+		data.HdtTaskBalance = v.HdtTaskBalance
+		b, err := json.Marshal(data)
 		if err != nil {
 			Log.Err(err.Error())
-			return
+			continue
 		}
 
-		for _, v := range list {
-			var data MinePoolTask
-			data.AppName = v.AppName
-			data.AppIcoPath = v.AppIcoPath
-			data.AppId = v.AppId
-			data.Time = v.Time
-			data.Hdt = v.Hdt
-			data.HdtTaskBalance = v.HdtTaskBalance
-			b, err := json.Marshal(data)
-			if err != nil {
-				Log.Err(err.Error())
-				continue
-			}
-
-			err = d.redisCli.LPush(KeyHourRankingOfHdtDig, b).Err()
-			if err != nil {
-				Log.Err(err.Error())
-				continue
-			}
-
-			//以下一段代码是设置KeyHourRankingOfHdtDig的有效时间【下一个整点的第一秒】
-			t := time.Now()
-			t1:=time.Date(t.Year(), t.Month(), t.Day(), t.Hour(), 0, 1, 0, time.Local)
-			after := 3600 - (t.Unix() - t1.Unix())
-			tm := time.Unix(time.Now().Unix() + after, 0)
-			d.redisCli.ExpireAt(KeyHourRankingOfHdtDig,tm)
+		err = d.redisCli.LPush(KeyHourRankingOfHdtDig, b).Err()
+		if err != nil {
+			Log.Err(err.Error())
+			continue
 		}
+
+		//以下一段代码是设置KeyHourRankingOfHdtDig的有效时间【下一个整点的第一秒】
+		t := time.Now()
+		t1 := time.Date(t.Year(), t.Month(), t.Day(), t.Hour(), 0, 1, 0, time.Local)
+		after := 3600 - (t.Unix() - t1.Unix())
+		tm := time.Unix(time.Now().Unix()+after, 0)
+		d.redisCli.ExpireAt(KeyHourRankingOfHdtDig, tm)
+	}
 }

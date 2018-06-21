@@ -7,24 +7,12 @@ import (
 	"hdt_app_go/common"
 	"hdt_app_go/common/hdtcodec"
 	. "hdt_app_go/gateway_app/log"
-	//. "hdt_app_go/gateway_app/model"
 	. "hdt_app_go/gateway_app/rpc"
 	proto "hdt_app_go/protcol"
 	"io/ioutil"
 )
 
 var ServerTag = "errcode"
-
-func HourHdtList(ctx iris.Context) {
-	//data := map[string]interface{}{
-	//	"errcode": proto.ERR_OK,
-	//}
-
-	//errcode, list := RpcClient.Register.GetUser7DaysHdtList()
-	//data["errcode"] = errcode
-	//data["list"] = list
-	//ctx.JSON(data)
-}
 
 func ECHO(ctx iris.Context) {
 	ctx.JSON("hello")
@@ -49,19 +37,20 @@ type FindPwdReq struct {
 }
 
 func Register(ctx iris.Context) {
-	data := map[string]interface{}{
+	data := map[string]interface{}{ //定义返回的map
 		"errcode": proto.ERR_OK,
 	}
 
-	ip := ctx.RemoteAddr()
+	ip := ctx.RemoteAddr() //获取请求段IP地址
 
-	body, _ := ioutil.ReadAll(ctx.Request().Body)
-	jsonStr, _ := hdtcodec.HdtDecodeV0(string(body))
+	body, _ := ioutil.ReadAll(ctx.Request().Body)    //读取body
+	jsonStr, _ := hdtcodec.HdtDecodeV0(string(body)) //根据编码规则解析请求的body
 	//jsonStr, _ := ioutil.ReadAll(ctx.Request().Body)
 
 	var req RegisterReq
-	err := json.Unmarshal([]byte(jsonStr), &req)
-	if err != nil || len(req.Tel) < 11 || req.RegisterFrom <= 0 || req.RegisterFrom > 2 { //手机号不能小于11位，注册来源只能（1.安卓，2.IOS）
+	err := json.Unmarshal([]byte(jsonStr), &req) //根据请求参数结构体解析参数
+	if err != nil || len(req.Tel) < 11 || req.RegisterFrom <= 0 ||
+		req.RegisterFrom > 2 { //手机号不能小于11位，注册来源只能（1.安卓，2.IOS）
 		Log.Err(err.Error())
 		data["errcode"] = proto.ERR_PARAM
 		data["err_msg"] = err.Error()
@@ -69,8 +58,8 @@ func Register(ctx iris.Context) {
 		return
 	}
 
-	result := RpcClient.Register.QianXunSnsVerify(req.Tel, req.Code)
-	if result == proto.ERR_OK {
+	result := RpcClient.Register.QianXunSnsVerify(req.Tel, req.Code) //验证短信验证码
+	if result == proto.ERR_OK {                                      //如果验证成功[匹配成功]则创建账号
 		data["errcode"] = RpcClient.Register.CreateAccountByTel(req.Tel, req.Pwd, ip, req.RegisterFrom)
 	} else {
 		data["errcode"] = result
@@ -152,10 +141,10 @@ func Login(ctx iris.Context) {
 		return
 	}
 
-	token := common.GenUserToken(req.Tel)
-	RpcClient.Register.SetUserToken(req.Tel, token)
+	token := common.GenUserToken(req.Tel)           //生成token
+	RpcClient.Register.SetUserToken(req.Tel, token) //设置token
 
-	errCode, userInfo := RpcClient.Register.Login(req.Tel, req.Pwd)
+	errCode, userInfo := RpcClient.Register.Login(req.Tel, req.Pwd) //获取用户信息
 	data["errcode"] = errCode
 	if errCode == proto.ERR_OK {
 		data["user_info"] = userInfo

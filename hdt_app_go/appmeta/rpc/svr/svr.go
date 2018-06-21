@@ -147,7 +147,7 @@ func (g *UserServceRpc) GetUseRankingHdtDig(ctx context.Context, req *proto.TelR
 		}
 		if i <= 10 { //只统计10个
 			rsp.RankingOfHdtDig = append(rsp.RankingOfHdtDig, a) //挖矿排名，进行记录
-		}else{
+		} else {
 			break
 		}
 	}
